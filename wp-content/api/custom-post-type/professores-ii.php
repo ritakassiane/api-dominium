@@ -12,6 +12,6 @@ function registrar_cpt_professores_ii() {
     'publicly_queryable' => true
   ));
 }
-add_action('init', 'registrar_cpt_professores-ii');
+add_action('init', 'registrar_cpt_professores_ii');
 
 ?>
