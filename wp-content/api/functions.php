@@ -8,6 +8,8 @@ require_once($template_diretorio . "/custom-post-type/transacao.php");
 require_once($template_diretorio . "/endpoints/usuario_post.php");
 require_once($template_diretorio . "/endpoints/usuario_get.php");
 
+require_once($template_diretorio . "/endpoints/administracao_post.php");
+
 // Token expira em 24h
 function expire_token() {
   return time() + (60 * 60 * 24);
