@@ -2,12 +2,6 @@
 
 function api_get_acervo_post ($request) {
     $slug = sanitize_text_field($request->get_param('slug'));
-    $page_object = get_page_by_path($slug, OBJECT, 'acervo');
-
-    $id = $page_object->ID;
-    $title = $page_object->post_title;
-    $acf = get_fields($id);
-
 
     $acervo_post = array(
         'slug' => $slug,
