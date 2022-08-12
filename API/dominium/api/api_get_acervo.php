@@ -7,11 +7,13 @@ function api_get_acervo (){
         $id = get_the_ID();
         $slug = get_post_field('post_name', $id);
         $titulo = get_the_title();
+        $resumo = get_the_excerpt($id);
 
         $post = array(
             'id' => $id,
             'slug' => $slug,
             'titulo' => $titulo,
+            'resumo' => $resumo,
         );
 
         $posts[$slug] = $post;
@@ -21,7 +23,7 @@ function api_get_acervo (){
 }
 
 function api_register_acervo (){
-    register_rest_route('dominium/equipe', '/acervo', array(
+    register_rest_route('dominium/', '/acervo', array(
         'methods' => 'GET',
         'callback' => 'api_get_acervo',
     ));
