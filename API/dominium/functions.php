@@ -1,6 +1,7 @@
 <?php
 
 require_once TEMPLATEPATH . '/api/api_dominium.php';
+require_once TEMPLATEPATH . '/api/api_get_adm.php';
 require_once TEMPLATEPATH . '/api/api_get_acervo.php';
 require_once TEMPLATEPATH . '/api/api_get_noticias.php';
 require_once TEMPLATEPATH . '/api/api_get_livraria.php';
@@ -11,6 +12,7 @@ require_once TEMPLATEPATH . '/api/api_get_livro.php';
 require_once TEMPLATEPATH . '/api/api_get_acervo_post.php';
 require_once TEMPLATEPATH . '/api/api_get_testimonial.php';
 require_once TEMPLATEPATH . '/api/api_get_direcao_membro.php';
+require_once TEMPLATEPATH . '/api/api_get_adm_membro.php';
 
 
 $template_diretorio = get_template_directory();
