@@ -5,6 +5,7 @@ require_once TEMPLATEPATH . '/api/api_get_acervo.php';
 require_once TEMPLATEPATH . '/api/api_get_noticias.php';
 require_once TEMPLATEPATH . '/api/api_get_livraria.php';
 require_once TEMPLATEPATH . '/api/api_get_testimonials.php';
+require_once TEMPLATEPATH . '/api/api_get_direcao.php';
 
 require_once TEMPLATEPATH . '/api/api_get_livro.php';
 require_once TEMPLATEPATH . '/api/api_get_acervo_post.php';
