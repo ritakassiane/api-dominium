@@ -14,6 +14,7 @@ require_once TEMPLATEPATH . '/api/api_get_acervo_post.php';
 require_once TEMPLATEPATH . '/api/api_get_testimonial.php';
 require_once TEMPLATEPATH . '/api/api_get_direcao_membro.php';
 require_once TEMPLATEPATH . '/api/api_get_adm_membro.php';
+require_once TEMPLATEPATH . '/api/api_get_professores.php';
 
 
 $template_diretorio = get_template_directory();
