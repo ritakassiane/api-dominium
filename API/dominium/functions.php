@@ -10,6 +10,7 @@ require_once TEMPLATEPATH . '/api/api_get_direcao.php';
 require_once TEMPLATEPATH . '/api/api_get_livro.php';
 require_once TEMPLATEPATH . '/api/api_get_acervo_post.php';
 require_once TEMPLATEPATH . '/api/api_get_testimonial.php';
+require_once TEMPLATEPATH . '/api/api_get_direcao_membro.php';
 
 
 $template_diretorio = get_template_directory();
