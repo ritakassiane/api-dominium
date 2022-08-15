@@ -1,6 +1,7 @@
 <?php
 
 require_once TEMPLATEPATH . '/api/api_dominium.php';
+require_once TEMPLATEPATH . '/api/api_get_professores_i.php';
 require_once TEMPLATEPATH . '/api/api_get_adm.php';
 require_once TEMPLATEPATH . '/api/api_get_acervo.php';
 require_once TEMPLATEPATH . '/api/api_get_noticias.php';

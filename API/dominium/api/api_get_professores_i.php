@@ -1,8 +1,8 @@
 <?php 
 
-function api_get_adm (){
+function api_get_professor_i (){
     $posts = array();
-    $args = array('post_type' => 'administracao', 'post_per_page' => -1);
+    $args = array('post_type' => 'professores-i', 'post_per_page' => -1);
     $loop = new WP_Query($args);
     while ($loop -> have_posts()) : $loop->the_post();
         $id = get_the_ID();
@@ -21,17 +21,6 @@ function api_get_adm (){
     return rest_ensure_response( $posts );
 }
 
-
-function api_register_administracao (){
-    register_rest_route('dominium/equipe', '/administracao', array(
-        'methods' => 'GET',
-        'callback' => 'api_get_adm',
-    ));
-}
-
-
-
-
 function api_register_professores_i(){
     register_rest_route('dominium/equipe', '/professor-i', array(
         'methods' => 'GET',
@@ -39,18 +28,7 @@ function api_register_professores_i(){
     ));
 }
 
-function api_register_professores_ii(){
-    register_rest_route('dominium/equipe', '/professor-ii', array(
-        'methods' => 'GET',
-        'callback' => 'api_get_professor_ii',
-    ));
-}
 
-
-add_action('rest_api_init', 'api_register_administracao');
 add_action('rest_api_init', 'api_register_professores_i');
-add_action('rest_api_init', 'api_register_professores_ii');
-
-
 
 ?>
