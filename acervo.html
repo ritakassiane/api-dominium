@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/acervo.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Acervo - Colégio Dominium</title>
+</head>
+<body>
+    <section id="header-superior">
+        <div class="container">
+            <div class="plataformas">
+                <ul>
+                    <li><img src="assets/imagens/logo-pitagoras.svg" alt="Logo rede Pitágoras"></li>
+                    <li><img src="assets/imagens/logo-escola-da-inteligencia.svg" alt="Logo Escola da Inteligência"></li>
+                </ul>
+            </div>
+            
+            <div class="links-externos">
+                <ul>
+                    <li><a href="https://dominiumteofilandia.eduxego.com.br/login" target="_blank">Área do aluno</a></li>
+                    <li><a href="https://dominiumteofilandia.eduxe.com.br/login" target="_blank">Área do professor</a></li>
+                    <li><a href="https://email.uolhost.com.br/colegiodominium.com.br/" target="_blank">Email institucional</a></li>
+                    <li><a href="https://wa.me/5575992054298?text=Ol%C3%A1%21+Vim+pelo+website+do+Col%C3%A9gio+Dominium" target="_blank"><img src="assets/imagens/whatsapp.svg" alt="Botão Whatsapp"></a></li>
+                    <li><a href="https://www.instagram.com/dominium.teof/?hl=pt-br"  target="_blank"><img src="assets/imagens/instagram.svg" alt="Botão Instagram"></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="assets/imagens/logo-acervo.svg" alt="Logo Acervo Colégio Dominium">
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Página Inicial</a></li>
+                    <li><a href="sobre-nos.html">Sobre nós</a></li>
+                    <li><a href="ensino.html">Ensino</a></li>
+                    <li><a href="calendario.html">Calendário</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="acervo.html" class="nav-border  nav-border-atual">Acervo</a></li>
+                    <li><a href="livraria.html" class="nav-border">Livraria</a></li>
+                    <li><a href="matricula.html" class="nav-border">Matrícula</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="header-acervo">
+                <div class="title-repositorio-and-acervo">
+                    <div class="titulo-acervo">
+                        <h1 class="acervo titulo-section ">Publicações</h1>
+                    </div>
+                    
+                    <div class="filtros">
+                        <button class="filtro filtro-roxo btn" onclick="filterSelection('quimica')"><a>QUÍMICA</a></button>
+                        <button class="filtro filtro-azul-claro btn" onclick="filterSelection('matematica')">MATEMÁTICA</button>
+                        <button class="filtro filtro-verde-claro btn" onclick="filterSelection('portugues')">PORTUGUÊS</button>
+                        <button class="filtro filtro-laranja btn" onclick="filterSelection('geografia')">GEOGRAFIA</button>
+                        <button class="filtro filtro-azul-escuro btn" onclick="filterSelection('fisica')">FISICA</button>
+                        <button class="filtro filtro-verde-escuro btn" onclick="filterSelection('biologia')">BIOLOGIA</button>
+
+                        <!-- <a href="" class="filtro filtro-azul-escuro" onclick="filterSelection('fisica')">FÍSICA</a> -->
+                        <!-- <a href="" class="filtro filtro-verde-escuro" onclick="filterSelection('biologia')">BIOLOGIA</a> -->
+                        <!-- <a href="" class="filtro filtro-verde-claro" onclick="filterSelection('portugues')">PORTUGUÊS</a> -->
+                        <!-- <a href="" class="filtro filtro-laranja" onclick="filterSelection('ed-fisica')">EDUCAÇÃO FÍSICA</a> -->
+                    </div>
+                </div>
+
+                <div class="outros-filtros">
+                    <div class="filtro-data">
+                        <a href="" class="filtro filtro-atual active" onclick="filterSelection('all')">RECENTES</a>
+                        <a href="" class="filtro">ANTIGAS</a>
+                    </div>
+
+                    <div class="filtro-tipo">
+                        <a href="" class="filtro">ARTIGO</a>
+                        <a href="" class="filtro">RESENHA</a>
+                        <a href="" class="filtro">RESUMO</a>
+                        <a href="" class="filtro">RECORTE</a>
+                        <a href="" class="filtro">OUTRA</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="publicacoes">
+                <div class="publicacao portugues">
+                    <div class="publicacao-column1">
+                        <div class="perfil-professor">
+                            <img src="assets/imagens/perfil-elaine.svg" alt="Professora Elaine">
+                            <h4>Maria Elaine Gomes</h4>
+                            &bull;
+                            <p>21 de abril de 2022</p>
+                        </div>
+
+                        <div class="meta-publicacao">
+                            <h3 class="titulo-publicacao">Precisão - Clarice Lispector</h3>
+                            <p class="resumo-publicacao">O que me tranquiliza
+                            é que tudo o que existe...</p>
+                            
+                            <div class="filtros-publicacao">
+                                <a href="" class="filtro filtro-verde-escuro">PORTUGUÊS</a>
+                                <a href="" class="filtro">Resenha</a>
+                                <a href="acervo-interacao.html" class="filtro filtro-preto">Acessar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publicacao-column2">
+                        <img src="assets/media/img-precisao-clarisce-lispector.svg" alt="Imagem destaque">
+                    </div>
+                </div>
+
+                <div class="publicacao quimica">
+                    <div class="publicacao-column1">
+                        <div class="perfil-professor">
+                            <img src="assets/imagens/perfil-andre.svg" alt="Professor André">
+                            <h4>André Portugal</h4>
+                            &bull;
+                            <p>15 de abril de 2022</p>
+                        </div>
+
+                        <div class="meta-publicacao">
+                            <h3 class="titulo-publicacao">Por que a água quente congela mais rapidamente?</h3>
+                            <p class="resumo-publicacao">Aristóteles notou pela primeira vez que a água quente congela mais rápido do que a fria, mas os químicos sempre se esforçara...</p>
+                            
+                            <div class="filtros-publicacao">
+                                <a href="" class="filtro filtro-roxo">QUÍMICA</a>
+                                <a href="" class="filtro">Artigo</a>
+                                <a href="acervo-interacao.html" class="filtro filtro-preto">Acessar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publicacao-column2">
+                        <img src="assets/media/img-por-que-a-agua-quente-congela-mais-rapidamente.svg" alt="Imagem destaque">
+                    </div>
+                </div>
+
+                <div class="publicacao geografia">
+                    <div class="publicacao-column1">
+                        <div class="perfil-professor">
+                            <img src="assets/imagens/perfil-elmo.svg" alt="Professor Elmo">
+                            <h4>Elmo Carneiro</h4>
+                            &bull;
+                            <p>09 de abril de 2022</p>
+                        </div>
+
+                        <div class="meta-publicacao">
+                            <h3 class="titulo-publicacao">A Guerra Fria como passaporte para um mundo polarizado</h3>
+                            <p class="resumo-publicacao">Bem se sabe que a polarização não é um fenômeno moderno, no entanto, pensar em polarização a nível global é pensar também...</p>
+                            
+                            <div class="filtros-publicacao">
+                                <a href="" class="filtro filtro-azul">GEOGRAFIA</a>
+                                <a href="" class="filtro">Artigo</a>
+                                <a href="acervo-interacao.html" class="filtro filtro-preto">Acessar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publicacao-column2">
+                        <img src="assets/media/img-a-guerra-fria-como-passaporte-para-um-mundo-polarizado.svg" alt="Imagem destaque">
+                    </div>
+                </div>
+
+                <div class="publicacao historia">
+                    <div class="publicacao-column1">
+                        <div class="perfil-professor">
+                            <img src="assets/imagens/perfil-george.svg" alt="Professor George">
+                            <h4>George Tavares</h4>
+                            &bull;
+                            <p>27 de março de 2022</p>
+                        </div>
+
+                        <div class="meta-publicacao">
+                            <h3 class="titulo-publicacao">A sabedoria da história diante do governo de Abraham Lincoln</h3>
+                            <p class="resumo-publicacao">Embora muitos historiadores tenham comentado sobre o uso do passado por Abraham Lincoln, nenhum o analisou...</p>
+                            
+                            <div class="filtros-publicacao">
+                                <a href="" class="filtro filtro-vinho">HISTÓRIA</a>
+                                <a href="" class="filtro">Artigo</a>
+                                <a href="acervo-interacao.html" class="filtro filtro-preto">Acessar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publicacao-column2">
+                        <img src="assets/media/img-a-sabedoria-da-historia-diante-do-governo-de-abraham-lincoln.svg" alt="Imagem destaque">
+                    </div>
+                </div>
+            </div>
+
+            <div class="seta-veja-mais">
+                <a href=""><img src="assets/imagens/seta-baixo-comprar-online.svg" alt="Veja mais"></a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-column1">
+                <div class="logo">
+                    <img src="assets/imagens/logo-dominium.svg" alt="Logo Dominium">
+                    <h2>Colégio Dominium</h2>
+                </div>
+
+                <address>
+                    Rua Prado, 4 - Núcleo Habitacional Teofilândia-BA
+                </address>
+            </div>
+
+            <div class="nav-lateral">
+                <ul>
+                    <li><a href="index.html">Página Inicial</a></li>
+                    <li><a href="sobre-nos.html">Sobre nós</a></li>
+                    <li><a href="ensino.html">Ensino</a></li>
+                    <li><a href="calendario.html">Calendário</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="galeria">Galeria</a></li>
+                    <li><a href="acervo.html">Acervo</a></li>
+                    <li><a href="livraria.html">Livraria</a></li>
+                    <li><a href="matricula.html">Matrícula</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+
+    <div class="rodape">
+        <div class="container">
+            <div class="plataformas">
+                <ul>
+                    <li><img src="assets/imagens/logo-pitagoras.svg" alt="Logo rede Pitágoras"></li>
+                    <li><img src="assets/imagens/logo-escola-da-inteligencia.svg" alt="Logo Escola da Inteligência"></li>
+                </ul>
+            </div>
+            
+            <div class="links-externos">
+                <ul>
+                    <li><a href="">Trabalhe Conosco</a></li>
+                    <li><a href="">Fale Conosco</a></li>
+                    <li><a href="">Acessibilidade</a></li>
+                    <li><a href="">Termos e Serviços</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        filterSelection("all")
+        function filterSelection(c){
+            var x,i;
+            x = document.getElementsByClassName("publicacao");
+            console.log(x)
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+            RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+            }
+        }
+
+        function RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                arr1.splice(arr1.indexOf(arr2[i]), 1);     
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+        var all_filters = document.getElementsByClassName("filtros");
+        var filters = all_filters.getElementsByClassName("filtro");
+        for (var i = 0; i < btns.length; i++) {
+            filters[i].addEventListener("click", function(){
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+
+    </script>
+</body>

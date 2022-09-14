@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/quem-somos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="./assets/js/vue.js"></script>
+
+    <title>Sobre nós - Colégio Dominium</title>
+</head>
+<body>
+    <section id="header-superior">
+        <div class="container">
+            <div class="plataformas">
+                <ul>
+                    <li><img src="assets/imagens/logo-pitagoras.svg" alt="Logo rede Pitágoras"></li>
+                    <li><img src="assets/imagens/logo-escola-da-inteligencia.svg" alt="Logo Escola da Inteligência"></li>
+                </ul>
+            </div>
+            
+            <div class="links-externos">
+                <ul>
+                    <li><a href="https://dominiumteofilandia.eduxego.com.br/login" target="_blank">Área do aluno</a></li>
+                    <li><a href="https://dominiumteofilandia.eduxe.com.br/login" target="_blank">Área do professor</a></li>
+                    <li><a href="https://email.uolhost.com.br/colegiodominium.com.br/" target="_blank">Email institucional</a></li>
+                    <li><a href="https://wa.me/5575992054298?text=Ol%C3%A1%21+Vim+pelo+website+do+Col%C3%A9gio+Dominium" target="_blank"><img src="assets/imagens/whatsapp.svg" alt="Botão Whatsapp"></a></li>
+                    <li><a href="https://www.instagram.com/dominium.teof/?hl=pt-br"  target="_blank"><img src="assets/imagens/instagram.svg" alt="Botão Instagram"></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="assets/imagens/logo-dominium.svg" alt="Logo Colégio Dominium">
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Página Inicial</a></li>
+                    <li><a href="sobre-nos.html" id="atual">Sobre nós</a></li>
+                    <li><a href="ensino.html">Ensino</a></li>
+                    <li><a href="calendario.html">Calendário</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="acervo.html" class="nav-border">Acervo</a></li>
+                    <li><a href="livraria.html" class="nav-border">Livraria</a></li>
+                    <li><a href="matricula.html" class="nav-border">Matrícula</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="destaque">
+            <div class="container">
+                <div class="foto-destaque">
+                    <img src="./assets/imagens/destaque-quem-somos.png" alt="Equipe Dominium">
+                </div>
+
+            </div>
+
+        </section>
+        <section class="quem-somos">
+            <div class="container">
+                <div class="quem-somos-column1">
+                    <img src="assets/imagens/img-quem-somos.svg">
+                </div>
+
+                <div class="quem-somos-column2">
+                    <h1 class="titulo-section">Quem somos</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit neque donec amet, donec ipsum tortor. Nullam pellentesque metus adipiscing mauris. Turpis suspendisse tortor diam faucibus eu. Cras nunc aliquet mauris libero tincidunt morbi.
+                        <br><br>
+                    Enim tincidunt lorem tincidunt convallis. Facilisis neque, tellus massa sodales dui facilisis sit ornare. Commodo libero pellentesque mi proin lorem massa dictum. Ut eget vitae eget at viverra fermentum. At aliquam in consequat, nam tristique orci facilisi tellus. </p>
+                </div>
+            </div>
+        </section>
+
+        <div id="app">
+            <section class="nossa-historia">
+                <div class="header">
+                    <h1 class="titulo-section"> Nossa História </h1>
+                </div>
+                <div class="container time-line">
+                    <div class="timeline">
+                        <div class="years">
+                            <ul>
+                                <li class="year" :class="(item.slug == ativo) ? 'ativo' : '' " v-for="item in historias" @click="fetchHistoria(item.slug)">{{ item.titulo }}</li>
+                            </ul>
+                        </div>
+                        <div class="content" v-if="historia" :key="historia.slug">
+                            <transition name="entrar" mode="out-in" appear>
+                                <div class="img">
+                                    <img :src="historia.acf.imagem" alt="">
+                                </div>
+                            </transition>
+                            <transition name="entrar" mode="out-in" appear>
+                                <div class="text">
+                                    <h2>{{ historia.acf.titulo }}</h2>
+                                    <p> {{historia.acf.texto}} </p>
+                                </div>
+                            </transition>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section class="nossa-equipe">
+            <div class="container">
+                <h1 class="titulo-section">Nossa equipe</h1>
+                <div class="filtro filtro-preto">Direção & Coordenação</div>
+                <div class="slides slides owl-carousel">
+                    <div class="inner-width">
+
+                        <div class="direcao-e-coordenacao">
+                            <div class="cards">
+                                <div class="card">
+                                    <img src="assets/media/flavio-simone.svg" alt="Flávio Simone">
+                                    <h3>Flávio Simone</h3>
+                                    <p class="subtitulo">ADMINISTRADOR</p>
+                                </div>
+        
+                                <div class="card">
+                                    <img src="assets/media/jucicleide-lopes.svg" alt="Jucicleide Lopes">
+                                    <h3>Jucicleide Lopes</h3>
+                                    <p class="subtitulo">DIRETORA</p>
+                                </div>
+        
+                                <div class="card">
+                                    <img src="assets/media/marleide-macedo.svg" alt="Marleide Macedo">
+                                    <h3>Marleide Macedo</h3>
+                                    <p class="subtitulo">COORDENADORA | ENSINO MÉDIO</p>
+                                </div>
+        
+                                <div class="card">
+                                    <img src="assets/media/melline-lima.svg" alt="Melline Lima">
+                                    <h3>Melline Lima</h3>
+                                    <p class="subtitulo">COORDENADORA | FUNDAMENTAL</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slides slides owl-carousel">
+                    <div class="administracao">
+                        <div class="filtro filtro-preto">Administração</div>
+                        <div class="cards">
+                            <div class="card">
+                                <img src="assets/media/tavares.svg" alt="Tavares">
+                                <h3>Tavares</h3>
+                                <p class="subtitulo">FINANCEIRO</p>
+                            </div>
+    
+                            <div class="card">
+                                <img src="assets/media/cristina.svg" alt="Cristina">
+                                <h3>Cristina</h3>
+                                <p class="subtitulo">SECRETÁRIA</p>
+                            </div>
+    
+                            <div class="card">
+                                <img src="assets/media/hebert.svg" alt="Hebert">
+                                <h3>Hebert</h3>
+                                <p class="subtitulo">MECANÓGRAFO</p>
+                            </div>
+    
+                            <div class="card">
+                                <img src="assets/media/ivanize.svg" alt="Ivanize">
+                                <h3>Ivanize</h3>
+                                <p class="subtitulo">SECRETÁRIA</p>
+                            </div>
+    
+                            <div class="card">
+                                <img src="assets/media/margarida.svg" alt="Margarida">
+                                <h3>Margarida</h3>
+                                <p class="subtitulo">RECEPÇÃO</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slides slides owl-carousel">
+
+                    <div class="professores-ensino-fundamental-1">
+                        <div class="filtro filtro-preto">Professores  •  Fundamental I</div>
+                        <div class="cards">
+                            <div class="card">
+                                <img src="assets/media/luciana-peleteiro.svg" alt="Luciana Peleteiro">
+                                <h3>Luciana Peleteiro</h3>
+                                <p class="subtitulo">Lorem ipsum</p>
+                            </div>
+    
+                            <div class="card">
+                                <img src="assets/media/lorem-ipsum1.svg" alt="Lorem ipsum 1">
+                                <h3>Lorem Ipsum</h3>
+                                <p class="subtitulo">LOREM IPSUM</p>
+                            </div>
+    
+                            <div class="card">
+                                <img src="assets/media/lorem-ipsum2.svg" alt="Lorem Ipsum 2">
+                                <h3>Lorem Ipsum</h3>
+                                <p class="subtitulo">LOREM IPSUM</p>
+                            </div>
+    
+                            <div class="card">
+                                <img src="assets/media/lorem-ipsum3.svg" alt="Lorem Ipsum 3">
+                                <h3>Lorem Ipsum</h3>
+                                <p class="subtitulo">LOREM IPSUM</p>
+                            </div>
+    
+                            <div class="card">
+                                <img src="assets/media/rose.svg" alt="Rose">
+                                <h3>Rose</h3>
+                                <p class="subtitulo">LOREM IPSUM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slides owl-carousel">
+                    <div class="professores-ensino-fundamental-2-e-medio">
+                        <div class="filtro filtro-preto">Professores  •  Fundamental II e Ensino Médio</div>
+                        <div class="cards">
+                            <div class="card">
+                                <img src="assets/media/elmo-carneiro.svg" alt="Elmo Carneiro">
+                                <h3>Elmo Carneiro</h3>
+                                <p class="subtitulo">GEOGRAFIA</p>
+                            </div>
+    
+                            <div class="card">
+                                <img src="assets/media/maria-elaine.svg" alt="Maria Elaine">
+                                <h3>Maria Elaine</h3>
+                                <p class="subtitulo">PORTUGUÊS E REDAÇÃO</p>
+                            </div>
+    
+                            <div class="card">
+                                <img src="assets/media/luciano-oliveira.svg" alt="Luciano Oliveira">
+                                <h3>Luciano Oliveira</h3>
+                                <p class="subtitulo">BIOLOGIA</p>
+                            </div>
+    
+                            <div class="card">
+                                <img src="assets/media/fernanda-gama.svg" alt="Fernanda Gama">
+                                <h3>Fernanda Gama</h3>
+                                <p class="subtitulo">PORTUGUÊS E LITERATURA</p>
+                            </div>
+    
+                            <div class="card">
+                                <img src="assets/media/natanael.svg" alt="Natanael">
+                                <h3>Natanael</h3>
+                                <p class="subtitulo">FILOSOFIA E SOCIOLOGIA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slides owl-carousel">
+                    <div class="funcionarios">
+                        <div class="filtro filtro-preto">Funcionários</div>
+                        <div class="cards">
+                            <div class="card">
+                                <img src="assets/media/cida.svg" alt="Cida">
+                                <h3>Cida</h3>
+                                <p class="subtitulo">LOREM IPSUM</p>
+                            </div>
+    
+                            <div class="card">
+                                <img src="assets/media/jurandir.svg" alt="Jurandir">
+                                <h3>Jurandir</h3>
+                                <p class="subtitulo">LOREM IPSUM</p>
+                            </div>
+    
+                            <div class="card">
+                                <img src="assets/media/sandra.svg" alt="Sandra">
+                                <h3>Sandra</h3>
+                                <p class="subtitulo">LOREM IPSUM</p>
+                            </div>
+    
+                            <div class="card">
+                                <img src="assets/media/massal.svg" alt="Massal">
+                                <h3>Massal</h3>
+                                <p class="subtitulo">LOREM IPSUM</p>
+                            </div>
+    
+                            <div class="card">
+                                <img src="assets/media/lorem-ipsum4.svg" alt="Lorem Ipsum">
+                                <h3>Lorem Ipsum</h3>
+                                <p class="subtitulo">LOREM IPSUM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-column1">
+                <div class="logo">
+                    <img src="assets/imagens/logo-dominium.svg" alt="Logo Dominium">
+                    <h2>Colégio Dominium</h2>
+                </div>
+
+                <address>
+                    Rua Prado, 4 - Núcleo Habitacional Teofilândia-BA
+                </address>
+            </div>
+
+            <div class="nav-lateral">
+                <ul>
+                    <li><a href="*">Página Inicial</a></li>
+                    <li><a href="*">Sobre nós</a></li>
+                    <li><a href="*">Ensino</a></li>
+                    <li><a href="*">Calendário</a></li>
+                    <li><a href="*">Notícias</a></li>
+                    <li><a href="*">Repositório</a></li>
+                    <li><a href="*">Livraria</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div class="rodape">
+        <div class="container">
+            <div class="plataformas">
+                <ul>
+                    <li><img src="assets/imagens/logo-pitagoras.svg" alt="Logo rede Pitágoras"></li>
+                    <li><img src="assets/imagens/logo-escola-da-inteligencia.svg" alt="Logo Escola da Inteligência"></li>
+                </ul>
+            </div>
+            
+            <div class="links-externos">
+                <ul>
+                    <li><a href="*">Trabalhe Conosco</a></li>
+                    <li><a href="*">Fale Conosco</a></li>
+                    <li><a href="*">Acessibilidade</a></li>
+                    <li><a href="*">Termos e Serviços</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(".owl-carousel").owlCarousel({
+          responsiveClass:true,
+          responsive:{
+            0:{
+              items:1
+            },
+            680:{
+              items:2
+            },
+            960:{
+              items:3
+            }
+          }
+        });
+      </script>
+          <script>
+            const app = new Vue({
+                el: '#app',
+                data: {
+                    historias: [],
+                    historia: null,
+                    ativo: ''
+                },
+                methods: {
+                    fetchHistorias() {
+                        let i = fetch('https://dominium-api.nordevtech.com.br/wp-json/dominium/historia/historia').then( response => {(response.json())
+                        .then( responseJson => { 
+                            this.historias = responseJson;
+                        })
+                        })
+                        console.log(i)
+                    },
+                    fetchHistoria(ano) {
+                        fetch(`https://dominium-api.nordevtech.com.br/wp-json/dominium/historia/historia_single/${ano}`).then( response => {(response.json())
+                        .then( responseJson => { 
+                            this.historia = responseJson;
+                            this.ativo = responseJson.slug;
+    
+                        })
+                        })
+                    }
+                },
+                created() {
+                    this.fetchHistorias();
+                }
+    
+            })
+        </script>
+</body>
+</html>
