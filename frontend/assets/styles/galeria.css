@@ -1,0 +1,349 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    max-width: 1150px;
+    width: 100%;
+    margin: auto;
+}
+
+/*--> Configs gerais <--*/
+.titulo-section{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3.0rem;
+    font-weight: 300;
+    line-height: 6.5rem;
+}
+
+h1 {
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+p{
+    font-size: 1.6rem;
+    line-height: 25px;
+}
+
+/*-Config filtros*/
+.filtros{
+    margin-left: 30px;
+}
+
+.outros-filtros .filtro:hover{
+    color: #000;
+}
+
+.filtro{
+    font-size: 1.6rem;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #666;
+}
+
+.filtro-atual{
+    color: #000;
+}
+
+.filtro-preto{
+    display: inline-block;
+    background-color: #000;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.filtro-roxo{
+    color: #8C4CDE;
+    background-color: #E6D8F8;
+    font-weight: 500;
+    display: inline-block;
+    margin: 5px;
+}
+
+.filtro-vinho{
+    color: #AD3C43;
+    background-color: #E6CDCE;
+    font-weight: 500;
+    display: inline-block;
+    margin: 5px;
+}
+
+.filtro-azul{
+    color: #4065C2;
+    background-color: #CDD5E8;
+    font-weight: 500;
+    display: inline-block;
+    margin: 5px;
+}
+
+.filtro-azul-claro{
+    color: #196186;
+    background-color: #CCEDFE;
+    font-weight: 500;
+    display: inline-block;
+    margin: 5px;
+}
+
+.filtro-azul-escuro{
+    color: #2C426F;
+    background-color: #DCDFE3;
+    font-weight: 500;
+    display: inline-block;
+    margin: 5px;
+}
+
+.filtro-verde-escuro{
+    color: #477B1E;
+    text-decoration: none;
+    background-color: #D8E8CC;
+    font-weight: 500;
+    display: inline-block;
+    margin: 5px;
+}
+
+.filtro-verde-claro{
+    color: #0F824A;
+    text-decoration: none;
+    background-color: #D5EDE2;
+    font-weight: 500;
+    display: inline-block;
+    margin: 5px;
+}
+
+a.filtro-laranja{
+    color: #B25F11;
+    text-decoration: none;
+    background-color: #F9E2CC;
+    font-weight: 500;
+    display: inline-block;
+    margin: 5px;
+}
+
+a.filtro-header-section{
+    color: #9E9E9E;
+    border: 1px solid #9E9E9E;
+}
+
+
+/*--> Config header-superior <--*/
+#header-superior{
+    background-color: black;
+    height: 65px;
+}
+
+#header-superior .container{
+    height: 65px;
+}
+
+#header-superior .container{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*Config plataformas*/
+.plataformas ul{
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+.plataformas ul li{
+    margin-right: 16px;
+}
+/*Config links-externos*/
+.links-externos ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.links-externos ul li{
+    margin-left: 32px;
+}
+
+.links-externos ul li a{
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+}
+
+.links-externos ul li img{
+    margin-left: -12px;
+}
+
+/*--> Config header<--*/
+header{
+    height: 120px;
+}
+
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 120px;
+}
+
+/*Config nav*/
+header nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+header nav ul li{
+    font-weight: 500;
+    margin-left: 32px;
+}
+
+header nav ul li a{
+    font-size: 1.6rem;
+    color: black;
+    text-decoration: none;
+}
+
+header nav ul li a:hover, nav ul li a#atual{
+    color: #C30101;
+}
+
+hr {
+    color: #000;
+    opacity: 0.53;
+}
+
+.nav-border{
+    padding: 10px 25px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.nav-border:hover, .nav-border#atual{
+    color: white;
+    background-color: #000;
+}
+
+.nav-border-atual{
+    background-color: #000;
+    color: #fff;
+}
+
+
+/*--> Config footer <--*/
+footer{
+    background-color: #f2f2f2;
+    height: 280px;
+    padding: 60px;
+}
+
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    height: 280px;
+}
+
+/*Config footer-column1*/
+
+.footer-column1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-column1 .logo{
+    display: flex;
+    align-items: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.footer-column1 .logo h2{
+    margin-left: 15px;
+}
+
+address{
+    font-size: 1.6rem;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/*Config nav-lateral*/
+.nav-lateral{
+    font-size: 1.6rem;
+}
+
+.nav-lateral ul{
+    list-style: none;
+}
+
+.nav-lateral ul li{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.nav-lateral ul li a{
+    color: black;
+    text-decoration: none;
+}
+
+.nav-lateral ul li a:hover{
+    text-decoration: underline;
+}
+
+/*--> Config rodapé <--*/
+.rodape{
+    background-color: black;
+    height: 65px;
+}
+
+.rodape .container{
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.recentes {
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.albuns {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.details {
+    margin-top: 25px;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+p {
+    font-size: 1.4rem;
+    line-height: 4px;
+}
+
+.cards {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
