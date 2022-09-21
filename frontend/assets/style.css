@@ -1061,6 +1061,7 @@ input:focus, select:focus, textarea:focus, button:focus{
 /*--> Config section.sobre-a-matricula <--*/
 .sobre-a-matricula{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding: 60px;
@@ -1080,6 +1081,22 @@ input:focus, select:focus, textarea:focus, button:focus{
     font-weight: 500;
 }
 
+@media (max-width: 800px){
+    .sobre-a-matricula{
+        padding: 30px !important;
+    }
+
+    .sobre-a-matricula-column-1{
+        width: 100% !important;
+        margin-right: 0;
+    }
+
+    .sobre-a-matricula-column-2 img{
+        width: 100%;
+        margin-top: 50px;
+    }
+}
+
 /*--> Config section.pre-matricula-online <--*/
 .title-section{
     display: flex;
@@ -1095,9 +1112,24 @@ input:focus, select:focus, textarea:focus, button:focus{
     justify-content: flex-end;
     align-items: flex-start;
 }
+
 .title-section-column2 img{
     width: 40px;
     margin: 45px;
+}
+
+@media (max-width: 800px){
+    .pre-matricula-online{
+        padding: 30px;
+    }
+
+    .title-section-column2{
+        display: none;
+    }
+
+    .form-pre-matricula-online{
+        padding: 0 !important;
+    }
 }
 
 .title{
@@ -1129,6 +1161,7 @@ input:focus, select:focus, textarea:focus, button:focus{
 
 .form-pre-matricula-online form input, select{
     margin: 10px;
+    width: 100%;
 }
 
 .form-pre-matricula-online form #email-responsavel{
@@ -1142,6 +1175,8 @@ input:focus, select:focus, textarea:focus, button:focus{
 .form-pre-matricula-online form button:hover{
     cursor: pointer;
 }
+
+
 
 /*-->> config Pag acervo-interacao <<--*/
 
