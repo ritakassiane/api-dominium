@@ -331,6 +331,10 @@ ul li {
     font-size: 1.4rem;
     font-weight: 550;
 }
+.month{
+    margin-bottom: 40px;
+}
+
 .month ul  {
     padding-left: 0;
     margin-top: 20px;
@@ -341,6 +345,16 @@ ul li {
     list-style: none;
     font-size: 1.4rem;
     font-weight: 550;
+}
+
+.month hr{
+    margin-top: 20px;
+}
+
+@media (min-width: 1000px){
+    .month hr{
+        display: none;
+    }
 }
  
 .legendas ul  {
