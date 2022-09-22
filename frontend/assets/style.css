@@ -638,6 +638,9 @@ input:focus, select:focus, textarea:focus, button:focus{
 }
 
 /*--> Config repositorio <--*/
+.repositorio{
+    padding-bottom: 60px;
+}
 
 .publicacoes .blog-responsivo {
     display: block;
