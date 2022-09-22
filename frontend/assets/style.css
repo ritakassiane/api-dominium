@@ -1081,7 +1081,7 @@ input:focus, select:focus, textarea:focus, button:focus{
     font-weight: 500;
 }
 
-@media (max-width: 800px){
+@media (max-width: 767px){
     .sobre-a-matricula{
         padding: 30px !important;
     }
@@ -1340,6 +1340,12 @@ nav .menu-btn i{
 
     .filtros-publicacao {
         margin-top: 100px;
+    }
+
+    @media only screen and (max-width: 479px){
+        .filtros-publicacao .filtro-preto{
+            margin-top: 15px;
+        }
     }
     /* Fim de acervo */
 
