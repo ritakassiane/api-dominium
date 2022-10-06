@@ -347,3 +347,17 @@ p {
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
+.card{
+    margin-top: 40px;
+}
+
+.card hr{
+    margin: 20px 0;
+}
+
+@media (min-width: 1000px){
+    .card hr{
+        display: none;
+    }
+}

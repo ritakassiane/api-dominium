@@ -534,7 +534,7 @@ select{
     color: #9E9E9E;
     border: 1px solid #9E9E9E;
     border-radius: 10px;
-    margin-bottom: 10px;
+    margin: 0 0 10px 0 !important;
 }
 
 textarea{
@@ -638,6 +638,9 @@ input:focus, select:focus, textarea:focus, button:focus{
 }
 
 /*--> Config repositorio <--*/
+.repositorio{
+    padding-bottom: 60px;
+}
 
 .publicacoes .blog-responsivo {
     display: block;
@@ -1061,6 +1064,7 @@ input:focus, select:focus, textarea:focus, button:focus{
 /*--> Config section.sobre-a-matricula <--*/
 .sobre-a-matricula{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding: 60px;
@@ -1080,6 +1084,22 @@ input:focus, select:focus, textarea:focus, button:focus{
     font-weight: 500;
 }
 
+@media (max-width: 767px){
+    .sobre-a-matricula{
+        padding: 30px !important;
+    }
+
+    .sobre-a-matricula-column-1{
+        width: 100% !important;
+        margin-right: 0;
+    }
+
+    .sobre-a-matricula-column-2 img{
+        width: 100%;
+        margin-top: 50px;
+    }
+}
+
 /*--> Config section.pre-matricula-online <--*/
 .title-section{
     display: flex;
@@ -1095,9 +1115,24 @@ input:focus, select:focus, textarea:focus, button:focus{
     justify-content: flex-end;
     align-items: flex-start;
 }
+
 .title-section-column2 img{
     width: 40px;
     margin: 45px;
+}
+
+@media (max-width: 800px){
+    .pre-matricula-online{
+        padding: 30px;
+    }
+
+    .title-section-column2{
+        display: none;
+    }
+
+    .form-pre-matricula-online{
+        padding: 0 !important;
+    }
 }
 
 .title{
@@ -1129,6 +1164,7 @@ input:focus, select:focus, textarea:focus, button:focus{
 
 .form-pre-matricula-online form input, select{
     margin: 10px;
+    width: 100%;
 }
 
 .form-pre-matricula-online form #email-responsavel{
@@ -1142,6 +1178,8 @@ input:focus, select:focus, textarea:focus, button:focus{
 .form-pre-matricula-online form button:hover{
     cursor: pointer;
 }
+
+
 
 /*-->> config Pag acervo-interacao <<--*/
 
@@ -1306,6 +1344,12 @@ nav .menu-btn i{
     .filtros-publicacao {
         margin-top: 100px;
     }
+
+    @media only screen and (max-width: 479px){
+        .filtros-publicacao .filtro-preto{
+            margin-top: 15px;
+        }
+    }
     /* Fim de acervo */
 
     /* Formulário */
@@ -1460,7 +1504,6 @@ nav .menu-btn i{
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        align-items: flex-start;
         margin-left: 10px;
     }
 
@@ -1471,20 +1514,20 @@ nav .menu-btn i{
     }
 
     select {
-        width: 80%;
+        width: 92%;
         padding: 15px;
         font-size: 1.4rem;
     }
 
     textarea {
-        max-width: 85%;
+        max-width: 81%;
         min-width: 150px;
         height: 180px;
         padding: 15px;
         font-size: 1.4rem;
     }
     button {
-        max-width: 80%;
+        max-width: 93%;
     }
 
     /* Sobre nós */
