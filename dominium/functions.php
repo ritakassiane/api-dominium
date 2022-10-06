@@ -39,6 +39,7 @@ require_once($template_diretorio . "/custom-post-type/livros.php");
 require_once($template_diretorio . "/custom-post-type/noticias.php");
 require_once($template_diretorio . "/custom-post-type/testimonials.php");
 require_once($template_diretorio . "/custom-post-type/historia.php");
+require_once($template_diretorio . "/custom-post-type/destaque.php");
 
 
 
