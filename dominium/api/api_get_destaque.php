@@ -23,7 +23,7 @@ function api_get_destaque(){
 
 
 function api_register_destaque (){
-    register_rest_route('dominium/assets', '/destauqe', array(
+    register_rest_route('dominium/assets', '/destaque', array(
         'methods' => 'GET',
         'callback' => 'api_get_destaque',
     ));

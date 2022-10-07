@@ -1,7 +1,7 @@
 <?php
 function registrar_cpt_destaque() {
-  register_post_type('Destaque', array(
-    'label' => 'destaque',
+  register_post_type('destaque', array(
+    'label' => 'Destaque',
     'description' => 'destaque',
     'public' => true,
     'show_ui' => true,
