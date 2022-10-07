@@ -17,7 +17,6 @@ function api_get_destaque(){
 
         $posts[$slug] = $post;
     endwhile;
-
     return rest_ensure_response( $posts );
 }
 
@@ -30,7 +29,5 @@ function api_register_destaque (){
 }
 
 
-
 add_action('rest_api_init', 'api_register_destaque');
-
 ?>
