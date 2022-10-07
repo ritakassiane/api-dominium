@@ -1,0 +1,46 @@
+img {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 768px) { 
+
+    .acervo-interacao {
+        overflow-x: hidden;
+    }
+
+    h1{
+        font-size: 3.0rem !important;
+        line-height: 3.5rem !important;
+        max-width: 80%;
+    }
+
+    .voltar {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .title {
+        min-width: 80%;
+        overflow-x: hidden;
+        gap: 12px;
+    }
+
+    .title img {
+        margin-right: -30px;
+    }
+
+    .perfil-professor {
+        display: flex;
+        max-width: 80%;
+        justify-content: center;
+        margin-bottom: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    p {
+        max-width: 80%;
+        justify-content: center;
+        margin-left: 10px;
+    }
+}

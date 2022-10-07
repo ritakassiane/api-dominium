@@ -101,19 +101,44 @@
 
                     <form action="*">
                         <div class="line">
-                            <input type="text" name="nome" placeholder="Nome" required>
-                            <input type="number" name="rg-identidade" placeholder="Número do RG">
+                            <input type="text" name="nome" placeholder="Nome do Aluno" required>
+                            <input type="number" name="telefone" placeholder="Telefone">
                         </div>
 
                         <div class="line">
-                            <input type="number" name="cpf" placeholder="CPF">
+                            <input type="number" name="documento-responsavel" placeholder="CPF ou RG do Responsável">
                             <input type="date" name="nascimento" placeholder="Nascimento" required>
                         </div>
 
                         <div class="line">
                             <select name="uf" id="UF">
+                                <option value="ac">AC</option>
+                                <option value="al">AL</option>
+                                <option value="ap">AP</option>
+                                <option value="am">AM</option>
                                 <option value="ba">BA</option>
+                                <option value="ce">CE</option>
+                                <option value="es">ES</option>
+                                <option value="go">GO</option>
+                                <option value="ma">MA</option>
+                                <option value="mt">MT</option>
+                                <option value="ms">MS</option>
+                                <option value="mg">MG</option>
+                                <option value="pa">PA</option>
+                                <option value="pb">PB</option>
+                                <option value="pr">PR</option>
+                                <option value="pe">PE</option>
+                                <option value="pi">PI</option>
+                                <option value="rj">RJ</option>
+                                <option value="rn">RN</option>
+                                <option value="rs">RS</option>
+                                <option value="ro">RO</option>
+                                <option value="rr">RR</option>
+                                <option value="sc">SC</option>
+                                <option value="sp">SP</option>
                                 <option value="se">SE</option>
+                                <option value="to">TO</option>
+                                <option value="df">DF</option>
                             </select>
 
                             <select name="sexo" id="Sexo">
@@ -124,13 +149,29 @@
 
                         <div class="line">
                             <input type="text" name="nome-pai" placeholder="Nome do Pai">
-
                             <input type="text" name="nome-mae" placeholder="Nome da Mãe" required>
                         </div>
 
-                        <input type="email" placeholder="Email do responsável" required id="email-responsavel">
+                        <div class="line">
+                            <input type="email" placeholder="Email do responsável" required id="email-responsavel">
+                            <select name="serie" id="serie-a-cursar">
+                                <option value="alfabetizacao">Alfabetização</option>
+                                <option value="primeiro-ano-ef1">1° Ano EF I</option>
+                                <option value="segundo-ano-ef1">2° Ano EF I</option>
+                                <option value="terceiro-ano-ef1">3° Ano EF I</option>
+                                <option value="quarto-ano-ef1">4° Ano EF I</option>
+                                <option value="quinto-ano-ef1">5° Ano EF I</option>
+                                <option value="sexto-ano-ef1">6° Ano EF I</option>
+                                <option value="setimo-ano-ef2">7° Ano EF II</option>
+                                <option value="oitavo-ano-ef2">8° Ano EF II</option>
+                                <option value="nono-ano-ef2">9° Ano EF II</option>
+                                <option value="primeiro-ano-em">1° Ano EM</option>
+                                <option value="segundo-ano-em">2° Ano EM</option>
+                                <option value="terceiro-ano-ef1">3° Ano EM</option>
+                            </select>
+                        </div>
 
-                        <button>AVANÇAR</button>
+                        <button>ENVIAR</button>
                     </form>
                 </div>
             </section>

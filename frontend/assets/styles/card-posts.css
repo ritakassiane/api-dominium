@@ -129,6 +129,11 @@
     border-radius: 20px;
     transition: all 0.3s;
  }
+
+ .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 8px !important;
+}
+
   @media screen and (max-width: 768px) {
     .blog-slider__img {
       transform: translateY(-50%);

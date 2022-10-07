@@ -1,4 +1,7 @@
 /* Responsividade */
+.posts-responsivo {
+    display: none;
+}
 
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
@@ -50,5 +53,9 @@
 
     .titulo-acervo {
         width: 100% !important;
+    }
+
+    .posts-responsivo {
+        display: block;
     }
 }

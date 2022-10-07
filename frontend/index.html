@@ -11,6 +11,9 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css">
     <link rel="stylesheet" href="assets/styles/card-posts.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css">
+    <!-- SwipperJS -->
+    <link rel="stylesheet" href="assets/styles/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./assets/styles/destaque.css">
   <!-- Carrossel  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
@@ -69,33 +72,16 @@
     
         <main>
             <section class="destaque">
-                <div class="container">
-                    <a href="*" class="seta">
-                        <img src="assets/imagens/seta-esquerda.svg">
-                    </a>
-    
-                    <div class="texto-destaque">
-                        <h1>Ser dominium faz toda a diferença!</h1>
-                        <p>Estudar no Colégio Dominium é a certeza da realização profissional em constante evolução.</p>
-                        
-                        <a href="sobre-nos.html">Sobre nós</a>
-    
-                        <div class="nav-destaque">
-                            <div class="circle" id="atual"></div>
-                            <div class="circle"></div>
-                            <div class="circle"></div>
-                            <div class="circle"></div>
-                        </div>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                          <img src="./assets/imagens/destaque_home.png" class="destaque-image">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./assets/imagens/destaque_3ano.png" class="destaque-image">
+                      </div>
                     </div>
-    
-                    <div class="foto-aluna">
-                        <img src="assets/media/aluna-ensino-fundamental2.png" alt="Aluna Ensino Fundamental 2">
-                    </div>
-    
-                    <a href="*" class="seta">
-                            <img src="assets/imagens/seta-direita.svg" alt="">
-                    </a>
-                </div>
+                  </div>
             </section>
             <section class="ensino">
                 <div class="container">
@@ -164,137 +150,65 @@
                             <!-- <img src="./assets/imagens/aspas-right.svg" alt=""> -->
                         </div>
                     </div>
-                    <!-- <div class="testimonial-section">
-                        <div class="inner-width">              
-                          <div class="slides owl-carousel">
-                            <div class="testimonial">
-                              <div class="test-info header">
-                                <img class="test-pic" src="./assets/imagens/maria_palma.png" alt="">
-                                <div class="test-name">
-                                  <span> Maria Palma Barreto</span>
+                    <div class="swiper testimonial-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="testimonial swiper-slide">
+                                <div class="test-info header">
+                                  <img class="test-pic" src="./assets/imagens/maria_palma.png" alt="">
+                                  <div class="test-name">
+                                    <span> Maria Palma Barreto</span>
+                                  </div>
+                                </div>
+                                <div class="footer">
+                                  <p>
+                                    Tenho dois filhos que cursaram no Colégio Dominium em períodos de tempo diferentes, isso só coloca em teste a qualidade de ensino em decorrer do tempo.
+                                  </p>
+                                </div>
+                            </div>
+                
+                            <div class="testimonial swiper-slide">
+                                <div class="test-info header">
+                                  <img class="test-pic" src="./assets/imagens/frediana.png" alt="">
+                                  <div class="test-name">
+                                    <span> Frediana Silva de Lima</span>
+                                  </div>
+                                </div>
+                                <div class="footer">
+                                  <p>
+                                    Colégio nota 10!! É notório o compromisso da instituição com a formação dos alunos, todo apoio e incentivo acontecem da melhor forma.
+                                  </p>
+                                </div>
+                            </div>
+
+                            <div class="testimonial swiper-slide">
+                                <div class="test-info header">
+                                  <img class="test-pic" src="./assets/imagens/matheudavid.png" alt="">
+                                  <div class="test-name">
+                                    <span> Mirete David Santos Lorem</span>
+                                  </div>
+                                </div>
+                                <div class="footer">
+                                  <p>
+                                    Estudo, estrutura, acolhiment   o e comunicação com pais e responsáveis! Tudo da melhor qualidade você encontra na instituição
+                                  </p>
                                 </div>
                               </div>
-                              <div class="footer">
-                                <p>
-                                  Tenho dois filhos que cursaram no Colégio Dominium em períodos de tempo diferentes, isso só coloca em teste a qualidade de ensino em decorrer do tempo.
-                                </p>
-                              </div>
-                            </div>
-                  
-                            <div class="testimonial">
-                              <div class="test-info header">
-                                <img class="test-pic" src="./assets/imagens/frediana.png" alt="">
-                                <div class="test-name">
-                                  <span> Frediana Silva de Lima</span>
-                                </div>
-                              </div>
-                              <div class="footer">
-                                <p>
-                                  Colégio nota 10!! É notório o compromisso da instituição com a formação dos alunos, todo apoio e incentivo acontecem da melhor forma.
-                                </p>
-                              </div>
-                            </div>
-                            
-                            <div class="testimonial">
-                              <div class="test-info header">
-                                <img class="test-pic" src="./assets/imagens/matheudavid.png" alt="">
-                                <div class="test-name">
-                                  <span> Mirete David Santos Lorem</span>
-                                </div>
-                              </div>
-                              <div class="footer">
-                                <p>
-                                  Estudo, estrutura, acolhimento e comunicação com pais e responsáveis! Tudo da melhor qualidade você encontra na instituição
-                                </p>
-                              </div>
-                            </div>
-                  
-                            <div class="testimonial">
-                              <div class="test-info header">
-                                <img class="test-pic" src="img/maria_palma.png" alt="">
-                                <div class="test-name">
-                                  <span> Maria Palma Barreto</span>
-                                </div>
-                              </div>
-                              <div class="footer">
-                                <p>
-                                  Tenho dois filhos que cursaram no Colégio Dominium em períodos de tempo diferentes, isso só coloca em teste a qualidade de ensino em decorrer do tempo.
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div> -->
-                      <div class="inner-width">
-                        <div class="testimonial">
-                            <div class="test-info header">
-                              <img class="test-pic" src="maria_palma.png" alt="">
-                              <div class="test-name">
-                                <span> Maria Palma Barreto</span>
-                              </div>
-                            </div>
-                            <div class="footer">
-                              <p>
-                                Tenho dois filhos que cursaram no Colégio Dominium em períodos de tempo diferentes, isso só coloca em teste a qualidade de ensino em decorrer do tempo.
-                              </p>
-                            </div>
-                        </div>
             
-                        <div class="testimonial">
-                            <div class="test-info header">
-                              <img class="test-pic" src="./assets/imagens/frediana.png" alt="">
-                              <div class="test-name">
-                                <span> Frediana Silva de Lima</span>
-                              </div>
-                            </div>
-                            <div class="footer">
-                              <p>
-                                Colégio nota 10!! É notório o compromisso da instituição com a formação dos alunos, todo apoio e incentivo acontecem da melhor forma.
-                              </p>
-                            </div>
-                        </div>
-        
-                        <div class="testimonial">
-                            <div class="test-info header">
-                              <img class="test-pic" src="./assets/imagens/maria_palma.png" alt="">
-                              <div class="test-name">
-                                <span> Maria Palma Barreto</span>
-                              </div>
-                            </div>
-                            <div class="footer">
-                              <p>
-                                Tenho dois filhos que cursaram no Colégio Dominium em períodos de tempo diferentes, isso só coloca em teste a qualidade de ensino em decorrer do tempo.
-                              </p>
+                            <div class="testimonial swiper-slide">
+                                <div class="test-info header">
+                                  <img class="test-pic" src="maria_palma.png" alt="">
+                                  <div class="test-name">
+                                    <span> Maria Palma Barreto</span>
+                                  </div>
+                                </div>
+                                <div class="footer">
+                                  <p>
+                                    Tenho dois filhos que cursaram no Colégio Dominium em períodos de tempo diferentes, isso só coloca em teste a qualidade de ensino em decorrer do tempo.
+                                  </p>
+                                </div>
                             </div>
                         </div>
-        
-                        <div class="testimonial">
-                            <div class="test-info header">
-                              <img class="test-pic" src="./assets/imagens/matheudavid.png" alt="">
-                              <div class="test-name">
-                                <span> Mirete David Santos Lorem</span>
-                              </div>
-                            </div>
-                            <div class="footer">
-                              <p>
-                                Estudo, estrutura, acolhiment   o e comunicação com pais e responsáveis! Tudo da melhor qualidade você encontra na instituição
-                              </p>
-                            </div>
-                          </div>
-        
-                        <div class="testimonial">
-                            <div class="test-info header">
-                              <img class="test-pic" src="maria_palma.png" alt="">
-                              <div class="test-name">
-                                <span> Maria Palma Barreto</span>
-                              </div>
-                            </div>
-                            <div class="footer">
-                              <p>
-                                Tenho dois filhos que cursaram no Colégio Dominium em períodos de tempo diferentes, isso só coloca em teste a qualidade de ensino em decorrer do tempo.
-                              </p>
-                            </div>
-                        </div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </section>
@@ -310,6 +224,7 @@
                         </div>
     
                         <div class="header-section-column2">
+                            <a href="livraria.html" class="filtro filtro-header-section ver-tudo-responsivo">Ver tudo</a>
                             <a href="livraria.html">
                                 <div class="ver-tudo">
                                     <img src="assets/imagens/seta-direita-ver-tudo.svg">
@@ -380,11 +295,11 @@
                         <div class="header-section-column1">
                             <img src="assets/imagens/logo-acervo.svg" alt="Ícone livraria">
                             <h1 class="titulo-section">Acervo</h1>
-                            <a href="*" class="filtro filtro-header-section">Ver tudo</a>
                         </div>
     
                         <div class="header-section-column2">
-                            <a href="acervo.html">
+                            <a href="*" class="filtro filtro-header-section ver-tudo-responsivo">Ver tudo</a>
+                            <a href="acervo.html" class="ver-tudo">
                                 <div class="ver-tudo">
                                     <img src="assets/imagens/seta-direita-ver-tudo.svg">
                                     <p>VER TUDO</p>
@@ -611,21 +526,45 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript">
-        $(".owl-carousel").owlCarousel({
-          margin:10,
-          responsiveClass:true,
-          responsive:{
-            479:{
-              items:1
+    <!-- Swiper JS -->
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        });
+    </script>
+    <!-- Initialize Swiper Testimonial -->
+    <script>
+        var swiper = new Swiper(".testimonial-swiper", {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          breakpoints: {
+            640: {
+              slidesPerView: 2.5,
+              spaceBetween: 20,
             },
-            680:{
-              items:2
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 40,
             },
-            960:{
-              items:3
-            }
-          }
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 50,
+            },
+          },
         });
       </script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>

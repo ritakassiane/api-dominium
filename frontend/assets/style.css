@@ -13,6 +13,7 @@ body{
     max-width: 1150px;
     width: 100%;
     margin: auto;
+    overflow: hidden;
 }
 
 /*--> Configs gerais <--*/
@@ -269,8 +270,6 @@ header nav ul li a:hover, nav ul li a#atual{
 /*-->> CONFIG INDEX <<--*/
 /*--> Config destaque <--*/
 .destaque{
-    height: calc(100vh - 185px);
-    background-image: url('imagens/bg-destaque.svg');
     object-fit: fill;
     background-position: center;
     background-size: 100%;
@@ -571,6 +570,12 @@ input:focus, select:focus, textarea:focus, button:focus{
     padding: 60px;
 }
 
+@media only screen and (max-width: 476px){
+    .livraria{
+        padding: 30px;
+    }
+}
+
 /*-Config header-livraria*/
 .header-section{
     display: flex;
@@ -599,6 +604,7 @@ input:focus, select:focus, textarea:focus, button:focus{
 .header-section-column2{
     display: flex;
     align-items: center;
+    margin-top: -25px;
 }
 
 .header-section-column2 a{
@@ -612,6 +618,10 @@ input:focus, select:focus, textarea:focus, button:focus{
     align-items: center;
     flex-wrap: wrap;
     gap: 15px;
+}
+
+.ver-tudo-responsivo {
+    display: none;
 }
 
 .card h3{
@@ -638,9 +648,6 @@ input:focus, select:focus, textarea:focus, button:focus{
 }
 
 /*--> Config repositorio <--*/
-.repositorio{
-    padding-bottom: 60px;
-}
 
 .publicacoes .blog-responsivo {
     display: block;
@@ -940,12 +947,7 @@ input:focus, select:focus, textarea:focus, button:focus{
     align-items: center;
     justify-content: center;
 }
-  
-  /* .inner-width{
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
-  } */
+
     
   .testimonial{
     background: #f1f1f1;
@@ -955,6 +957,8 @@ input:focus, select:focus, textarea:focus, button:focus{
     border-radius: 8px;
     cursor: pointer;
     margin-left: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .test-info {
@@ -996,14 +1000,14 @@ input:focus, select:focus, textarea:focus, button:focus{
     line-height: 22px;
     margin-top: 20px;
   }
-  
-.inner-width {
-    display: flex;
-    justify-content: space-around;
-    max-width: 100%;
-    overflow-x: auto;
-}
 
+  .swiper-horizontal>.swiper-pagination-progressbar, .swiper-pagination-progressbar.swiper-pagination-horizontal, .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite, .swiper-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+    width: 0 !important;
+    height: 4px;
+    left: 0;
+    top: 0;
+}
+  
 .inner-width::-webkit-scrollbar {
     width: 0;
 }
@@ -1064,10 +1068,27 @@ input:focus, select:focus, textarea:focus, button:focus{
 /*--> Config section.sobre-a-matricula <--*/
 .sobre-a-matricula{
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding: 60px;
+}
+
+@media only screen and (max-width: 1000px){
+    .sobre-a-matricula{
+        flex-direction: column;
+        padding: 60px;
+    }
+
+    .sobre-a-matricula-column-1{
+        width: 100% !important;
+        margin-right: 0 !important;
+        padding: 60px ;
+    }
+
+    .sobre-a-matricula-column-2 img{
+        margin-top: 30px;
+        width: 100%;
+    }
 }
 
 .sobre-a-matricula-column-1{
@@ -1082,22 +1103,6 @@ input:focus, select:focus, textarea:focus, button:focus{
 .lista-de-documentos li{
     font-size: 2.0rem;
     font-weight: 500;
-}
-
-@media (max-width: 767px){
-    .sobre-a-matricula{
-        padding: 30px !important;
-    }
-
-    .sobre-a-matricula-column-1{
-        width: 100% !important;
-        margin-right: 0;
-    }
-
-    .sobre-a-matricula-column-2 img{
-        width: 100%;
-        margin-top: 50px;
-    }
 }
 
 /*--> Config section.pre-matricula-online <--*/
@@ -1115,24 +1120,9 @@ input:focus, select:focus, textarea:focus, button:focus{
     justify-content: flex-end;
     align-items: flex-start;
 }
-
 .title-section-column2 img{
     width: 40px;
     margin: 45px;
-}
-
-@media (max-width: 800px){
-    .pre-matricula-online{
-        padding: 30px;
-    }
-
-    .title-section-column2{
-        display: none;
-    }
-
-    .form-pre-matricula-online{
-        padding: 0 !important;
-    }
 }
 
 .title{
@@ -1141,6 +1131,16 @@ input:focus, select:focus, textarea:focus, button:focus{
 
 .title img{
     margin-right: 30px;
+}
+
+.pre-matricula-online .title-section-column2{
+    display: none;
+}
+
+@media only screen and (max-width: 1000px){
+    .pre-matricula-online{
+        width: 50% !important;
+    }
 }
 
 /*--> config section.form-pre-matricula-online <--*/
@@ -1162,13 +1162,8 @@ input:focus, select:focus, textarea:focus, button:focus{
     flex-direction: column;
 }
 
-.form-pre-matricula-online form input, select{
-    margin: 10px;
-    width: 100%;
-}
-
-.form-pre-matricula-online form #email-responsavel{
-    width: 95%;
+.form-pre-matricula-online form input, .form-pre-matricula-online form select{
+    margin: 10px !important;
 }
 
 .form-pre-matricula-online form button{
@@ -1178,8 +1173,6 @@ input:focus, select:focus, textarea:focus, button:focus{
 .form-pre-matricula-online form button:hover{
     cursor: pointer;
 }
-
-
 
 /*-->> config Pag acervo-interacao <<--*/
 
@@ -1246,11 +1239,14 @@ nav .menu-btn i{
     .rodape .links-externos {
         max-width: 100%;
         display: flex;
+        justify-content: flex-start;
     }
 
     .rodape .links-externos ul {
         max-width: 100%;
         overflow-x: hidden;
+        padding: 0;
+        margin: 0;
     }
 
     .rodape .container .plataformas{
@@ -1262,7 +1258,9 @@ nav .menu-btn i{
     }
 
     .nav-border {
-        display: none;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
     }
 
     header nav ul {
@@ -1276,7 +1274,7 @@ nav .menu-btn i{
 
     nav ul li {
         width: 100%;
-        margin: 30px 0;
+        padding: 25px;
     }
 
     /* Ensino  */
@@ -1319,13 +1317,21 @@ nav .menu-btn i{
 
     /* Fim de Ensino */
 
+    /* Livraria */
+    .livros {
+        margin-top: 25px;
+    }
+
+    .ver-tudo-responsivo {
+        display: block;
+    }
+
+    /* Fim de Livraria  */
+
     /* Acervo */
 
     .publicacoes .blog-responsivo {
         display: block;
-    }
-    .publicacao {
-        display: none;
     }
 
     .posts-responsivo {
@@ -1345,7 +1351,7 @@ nav .menu-btn i{
         margin-top: 100px;
     }
 
-    @media only screen and (max-width: 479px){
+    @media only screen and (max-width: 467px){
         .filtros-publicacao .filtro-preto{
             margin-top: 15px;
         }
@@ -1388,9 +1394,14 @@ nav .menu-btn i{
       display: block;
       transition: all 0.3s ease;
       transform: translate3d(-60px, 0, 0);
-
-      /* overflow: scroll; */
+      max-height: calc(100% - 20px);
+      overflow-y: auto;
     }
+
+    ul::-webkit-scrollbar {
+        width: 0;
+    }
+
     #click:checked ~ ul{
       left: 0;
     }
@@ -1442,6 +1453,13 @@ nav .menu-btn i{
 
     .ensino .column-right .content {
         padding-top: 50px;
+    }
+
+    /* Tetimonial */
+
+    .testimonial {
+        max-width: 480px;
+        min-width: 250px;
     }
 
     /* Formulario de contato */
@@ -1504,7 +1522,27 @@ nav .menu-btn i{
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        align-items: flex-start;
         margin-left: 10px;
+    }
+
+    @media only screen and (max-width: 467px){
+        form{
+            margin-left: 0;
+            align-items: center;
+        }
+
+        select{
+            width: 91% !important;
+        }
+
+        textarea{
+            width: 81% !important;
+        }
+
+        button{
+            max-width: 92% !important;
+        }
     }
 
     input {
@@ -1514,20 +1552,21 @@ nav .menu-btn i{
     }
 
     select {
-        width: 92%;
+        width: 80%;
         padding: 15px;
         font-size: 1.4rem;
+        margin: 0 0 10px 0;
     }
 
     textarea {
-        max-width: 81%;
+        max-width: 85%;
         min-width: 150px;
         height: 180px;
         padding: 15px;
         font-size: 1.4rem;
     }
     button {
-        max-width: 93%;
+        max-width: 80%;
     }
 
     /* Sobre nós */
@@ -1547,14 +1586,6 @@ nav .menu-btn i{
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
-
-    /* testando */
-    .destaque {
-        display: none;
-    }
-
-    /* fim de teste */
-
     .container{
         max-width: 479px;
         width: 100%;
@@ -1587,11 +1618,15 @@ nav .menu-btn i{
     .header-section {
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
     }
 
     .ver-tudo {
         display: none;
     }
+
+
     .header-section-column1 a{
         display: block;
     }

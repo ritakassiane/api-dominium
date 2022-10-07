@@ -25,6 +25,7 @@ body{
 p{
     font-size: 1.6rem;
     line-height: 25px;
+    width: 80%;
 }
 
 /*-Config filtros*/
@@ -269,7 +270,6 @@ header nav ul li a:hover, nav ul li a#atual{
 /*-->> CONFIG INDEX <<--*/
 /*--> Config destaque <--*/
 .destaque{
-    height: 100vh;
     width: 100%;
 }
 
@@ -512,6 +512,10 @@ input:focus, select:focus, textarea:focus, button:focus{
 
 }
 
+.quem-somos-column2 {
+    overflow-x: hidden;
+}
+
 .time-line {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -521,6 +525,7 @@ input:focus, select:focus, textarea:focus, button:focus{
     background-color: white;
     width: 100%;
     min-height: 50vh;
+    max-height: 100vh;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -594,7 +599,12 @@ input:focus, select:focus, textarea:focus, button:focus{
     max-height: 60vh;
     /* padding: 0 30px 10px 0; */
     margin-left: 60px;
+    overflow-y: auto;
 
+}
+
+.text::-webkit-scrollbar{
+    width: 0;
 }
 
 .timeline .content .text h2 {
@@ -633,6 +643,8 @@ input:focus, select:focus, textarea:focus, button:focus{
 
 .card{
     margin: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 .owl-carousel .owl-item img {
@@ -684,411 +696,8 @@ input:focus, select:focus, textarea:focus, button:focus{
 }
 
 
-/*--> Config section.ensino <--*/
-
-.ensino{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: 60px;
-    background: #F2F2F2;
-}
-
-.title-ensino{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.title-ensino h2{
-    font-family: 'Bebas Neue', cursive;
-    font-size: 5.6rem;
-    margin-left: 32px;
-}
-
-.ensino .white-box {
-    /* position: relative; */
-    width: 100%;
-    min-height: 85vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background: #fff;
-    border-radius: 16px;
-}
-
-.ensino .column-left{
-    width: 45%;
-    max-height: 100vh;
-    display: flex;
-    /* position: relative; */
-    align-items: flex-start;
-    flex-direction: column;
-    border-radius: 16px 0px 0px 16px;;
-}
-
-.column-left .item {
-    width: 100%;
-    min-height: 33.33vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.column-left .item a {
-    text-decoration: none;
-    color: #000;
-    text-align: center;
-    margin-left: 25px;
-    font-family: 'Bebas Neue', cursive;
-    font-size: 5.6rem;
-}
-
-.column-left .item .fundamental-one{
-    background: #fff;
-    border-radius: 16px 0px 0px 0px;
-}
-
-.column-left .item.fundamental-two{
-    background: #FFC700;
-}
-
-.column-left .item.ensino-medio{
-    background: #C30101;
-    border-radius: 0px 0px 0px 16px;   
-}
-
-.column-left .item.fundamental-two a{
-    color: #fff;
-}
-
-.column-left .item.ensino-medio a{
-    color: #fff;
-}
-
-.ensino .column-right {
-    width: 55%;
-    max-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background: #fff;
-    border-radius: 0px 16px 16px 0px;;
-    overflow: hidden;
-}
-
-.ensino .column-right .content {
-    width: 50%;
-    height: 50vh;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 20px;
-    padding-top: 150px;
-    margin-left: 50px;
-    background: #fff;
-    overflow-wrap: break-word;
-}
-
-.ensino .column-right .images {
-    width: 100%;
-    height: 50vh;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    background-image: url("./imagens/bubble.svg");
-    background-repeat: no-repeat;
-    background-position: left bottom;
-}
-
-.ensino .column-right .images .background-wave {
-    display: flex;
-    justify-content: right;
-    width: 100%;
-}
-
-.ensino .column-right .images .background-wave img {
-    margin-top: 50px;
-}
-
-.ensino .column-right .content .text-about {
-    width: 100%;
-    overflow-wrap: break-word;
-}
-
-.ensino .column-right .content .text-about p {
-    white-space: initial;
-    color: #000;
-    font-family: 'Roboto', sans-serif;
-    line-height: 24px;
-    letter-spacing: 1px;
-}
 
 
-.ensino .column-right .content buttom .text {
-    color: #000;
-    font-family: 'Roboto', sans-serif;
-    padding: 20px;
-    line-height: 24px;
-    letter-spacing: 1px;
-}
-
-.ensino .content button {
-    padding-top: 30px;
-    background-color: #fff;
-    border: none;
-    align-items: flex-start;
-}
-
-.ensino .content button .button {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-
-.ensino .content button .button .text {
-    color: #000;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    padding-left: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.ensino .content button .arrow {
-    height: 30px;
-    width: 30px;
-    display: flex;
-    background-color: #000;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/*-->> Fim de section.Ensino <<--*/
-
-/*--> Config section.testimonials <--*/
-
-.testimonials {
-    background: #C30101;
-    padding: 40px 0;
-}
-
-.testimonials .background {
-    display: flex;
-    justify-content: space-between;
-}
-
-/*-->> Config aspas, background <<--*/
-
-.testimonials .background .aspas-left {
-    /* display: flex; */
-    align-items: flex-start;
-}
-
-.testimonials .background .aspas-right {
-    /* display: flex; */
-    align-items: flex-end;
-}
-
-/* -->> Carossel testimonials.testimonial <<-- */
-.testimonial-section{
-    background: #C30101;
-    padding: 40px 0;
-  }
-  
-  .inner-width{
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
-  }
-    
-  .testimonial{
-    background: #f1f1f1;
-    /* padding: 40px; */
-    overflow: hidden;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  
-  .test-info {
-    display: flex;
-    height: 60px;
-    padding: 50px 40px 60px 40px;
-    align-items: center;
-    background-color: #F2F2F2;
-  }
-  
-  .testimonial .footer {
-    background-color: #FFF;
-    padding: 10px 40px 40px 40px;
-  }
-  
-  .test-pic{
-    width: 100px !important;
-    border-radius: 50%;
-    margin-right: 15px;
-  }
-  
-  .test-name{
-    font-size: 12px;
-    color: #333;
-  }
-  
-  .test-name span{
-    text-transform: uppercase;
-    display: block;
-    font-size: 3rem;
-    font-family: 'Bebas Neue', cursive;
-    line-height: 30px;
-    font-weight: 400;
-    color: #000;
-  }
-  
-  .testimonial p{
-    font-size: 12px;
-    line-height: 22px;
-    margin-top: 20px;
-  }
-  
-
-
-/*-->> Config pag livraria <<--*/
-.title-repositorio-and-acervo{
-    display: flex;
-    align-items: center;
-}
-
-/*-->> Config pag acervo <<-- */
-/*-Config outros-filtros*/
-.outros-filtros{
-    display: flex;
-    justify-content: space-between;
-}
-
-.filtro-data{
-    display: flex;
-}
-
-.filtro-tipo{
-    display: flex;
-}
-
-/*-Config seta-veja-mais*/
-.seta-veja-mais{
-    display: flex;
-    justify-content: center;
-    margin: 60px;
-}
-
-.seta-veja-mais img{
-    width: 60px;
-}
-
-/*-->> Config pag matricula <<--*/
-/*--> Config section.sobre-a-matricula <--*/
-.sobre-a-matricula{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 60px;
-}
-
-.sobre-a-matricula-column-1{
-    width: 420px;
-    margin-right: 150px;
-}
-
-.lista-de-documentos{
-    margin-top: 30px;
-}
-
-.lista-de-documentos li{
-    font-size: 2.0rem;
-    font-weight: 500;
-}
-
-/*--> Config section.pre-matricula-online <--*/
-.title-section{
-    display: flex;
-}
-
-.title-section-column1{
-    flex: 1;
-}
-
-.title-section-column2{
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-}
-.title-section-column2 img{
-    width: 40px;
-    margin: 45px;
-}
-
-.title{
-    display: flex;
-}
-
-.title img{
-    margin-right: 30px;
-}
-
-/*--> config section.form-pre-matricula-online <--*/
-.form-pre-matricula-online{
-    padding: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.form-pre-matricula-online h2{
-    font-size: 24px;
-    align-self: flex-start;
-}
-
-.form-pre-matricula-online form{
-    display: flex;
-    flex-direction: column;
-}
-
-.form-pre-matricula-online form input, select{
-    margin: 10px;
-}
-
-.form-pre-matricula-online form #email-responsavel{
-    width: 95%;
-}
-
-.form-pre-matricula-online form button{
-    width: 100%;
-}
-
-.form-pre-matricula-online form button:hover{
-    cursor: pointer;
-}
-
-/*-->> config Pag acervo-interacao <<--*/
-
-.acervo-interacao .title{
-    display: flex;
-    align-items: center;
-}
-
-.acervo-interacao .conteudo{
-    width: 600px;
-    margin: auto;
-}
-
-.acervo-interacao .perfil-professor{
-    margin-bottom: 50px;
-}
 
 /* Responsividade */
 
@@ -1166,6 +775,15 @@ input:focus, select:focus, textarea:focus, button:focus{
 
     .timeline .content .text {
         margin-bottom: 40px;
+    }
+
+    .timeline .years ul li {
+        font-size: 1.5rem;
+        overflow-y: auto;
+    }
+
+    .timeline .content .text p {
+        width: 80%;
     }
 
 }

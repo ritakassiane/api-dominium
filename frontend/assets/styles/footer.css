@@ -1,0 +1,78 @@
+
+/*--> Config footer <--*/
+footer{
+    background-color: #fff;
+    height: 280px;
+    padding: 60px;
+}
+
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    height: 280px;
+}
+
+/*Config footer-column1*/
+
+.footer-column1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-column1 .logo{
+    display: flex;
+    align-items: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.footer-column1 .logo h2{
+    margin-left: 15px;
+}
+
+address{
+    font-size: 1.6rem;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+@media (max-width: 1000px){
+    .logo {
+        margin-left: 20px;
+        flex-direction: column;
+    }
+    
+    .footer-column1 {
+        align-items: flex-start;
+    }
+
+    .footer-column1 .logo h2 {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .rodape .container {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rodape .links-externos {
+        max-width: 100%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .rodape .links-externos ul {
+        max-width: 100%;
+        overflow-x: hidden;
+        padding: 0;
+        margin: 0;
+    }
+
+    .rodape .container .plataformas{
+        display: none;
+    }
+
+}
