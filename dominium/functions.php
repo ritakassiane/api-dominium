@@ -1,5 +1,4 @@
 <?php
-
 require_once TEMPLATEPATH . '/api/api_get_adm.php';
 require_once TEMPLATEPATH . '/api/api_get_professores_i.php';
 require_once TEMPLATEPATH . '/api/api_get_professores_ii.php';
@@ -9,7 +8,7 @@ require_once TEMPLATEPATH . '/api/api_get_livraria.php';
 require_once TEMPLATEPATH . '/api/api_get_testimonials.php';
 require_once TEMPLATEPATH . '/api/api_get_direcao.php';
 require_once TEMPLATEPATH . '/api/api_get_historia.php';
-
+require_once TEMPLATEPATH . '/api/api_register_destaque.php';
 
 
 require_once TEMPLATEPATH . '/api/api_get_livro.php';
@@ -21,9 +20,8 @@ require_once TEMPLATEPATH . '/api/api_get_professores.php';
 require_once TEMPLATEPATH . '/api/api_get_historia_single.php';
 
 
-
-
 $template_diretorio = get_template_directory();
+
 
 require_once($template_diretorio . "/custom-post-type/administracao.php");
 require_once($template_diretorio . "/custom-post-type/direcao.php");
@@ -37,3 +35,4 @@ require_once($template_diretorio . "/custom-post-type/testimonials.php");
 require_once($template_diretorio . "/custom-post-type/historia.php");
 require_once($template_diretorio . "/custom-post-type/destaque.php");
 ?>
+
