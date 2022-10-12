@@ -1,3 +1,20 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    max-width: 1150px;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
 
 /*--> Config footer <--*/
 footer{
@@ -37,13 +54,92 @@ address{
     font-style: normal;
 }
 
+/*Config nav-lateral*/
+.nav-lateral{
+    font-size: 1.6rem;
+}
+
+.nav-lateral ul{
+    list-style: none;
+}
+
+.nav-lateral ul li{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.nav-lateral ul li a{
+    color: black;
+    text-decoration: none;
+}
+
+.nav-lateral ul li a:hover{
+    text-decoration: underline;
+}
+
+/*--> Config rodapé <--*/
+.rodape{
+    background-color: black;
+    height: 65px;
+}
+
+.rodape .container{
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Config plataformas*/
+.plataformas ul{
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+.plataformas ul li{
+    margin-right: 16px;
+}
+
+/*Config links-externos*/
+.links-externos ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.links-externos ul li{
+    margin-left: 32px;
+}
+
+.links-externos ul li a{
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+}
+
+.links-externos ul li img{
+    margin-left: -12px;
+}
+
 
 @media (max-width: 1000px){
+
+    /* Header e Footer */
+    #header-superior {
+        display: none;
+    }
+
     .logo {
         margin-left: 20px;
         flex-direction: column;
     }
-    
+
     .footer-column1 {
         align-items: flex-start;
     }
@@ -74,5 +170,15 @@ address{
     .rodape .container .plataformas{
         display: none;
     }
+}
 
+@media only screen and (max-width: 479px){
+    .container {
+        max-width: 479px;
+        width: 100%;
+        margin: auto;
+    }
+    .nav-lateral {
+        display: none;
+    }
 }
