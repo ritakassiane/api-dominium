@@ -18,7 +18,7 @@ require_once TEMPLATEPATH . '/api/api_get_direcao_membro.php';
 require_once TEMPLATEPATH . '/api/api_get_adm_membro.php';
 require_once TEMPLATEPATH . '/api/api_get_professores.php';
 require_once TEMPLATEPATH . '/api/api_get_historia_single.php';
-require_once TEMPLATEPATH . '/api/api_get_destaque_single.php';
+require_once TEMPLATEPATH . '/api/api_get_single_destaque.php';
 
 
 $template_diretorio = get_template_directory();
