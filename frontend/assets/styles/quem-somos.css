@@ -645,7 +645,57 @@ input:focus, select:focus, textarea:focus, button:focus{
     margin: 15px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
 }
+
+.card-inner {
+    box-shadow: 0 0 10px #a9b3d6;
+    border-radius: 16px;
+    position: relative;
+    transform-style: preserve-3d !important;
+	transition: all 1s ease;
+}
+
+.card-inner .card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-inner .card-front img {
+    width: 100%;
+}
+
+.nossa-equipe .card-front,
+.nossa-equipe .card-back{
+	backface-visibility: hidden;
+}
+
+.card-inner .card-back {
+    background-color: #C30101;
+    color: white;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    transform: rotateY(180deg);
+}
+
+.nossa-equipe .card:hover .card-inner{
+    transform: rotateY(180deg);
+}
+
+
 
 .owl-carousel .owl-item img {
     display: block;
