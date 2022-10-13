@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="assets/styles/quem-somos.css">
     <link rel="stylesheet" href="assets/styles/header.css">
     <link rel="stylesheet" href="assets/styles/footer.css">
@@ -34,8 +35,8 @@
                     <li><a href="https://dominiumteofilandia.eduxego.com.br/login" target="_blank">Área do aluno</a></li>
                     <li><a href="https://dominiumteofilandia.eduxe.com.br/login" target="_blank">Área do professor</a></li>
                     <li><a href="https://email.uolhost.com.br/colegiodominium.com.br/" target="_blank">Email institucional</a></li>
-                    <li><a href="https://wa.me/5575992054298?text=Ol%C3%A1%21+Vim+pelo+website+do+Col%C3%A9gio+Dominium" class="whatsapp" target="_blank"><img src="assets/imagens/whatsapp.svg" alt="Botão Whatsapp"></a></li>
-                    <li><a href="https://www.instagram.com/dominium.teof/?hl=pt-br"  target="_blank" class="instagram"><img src="assets/imagens/instagram.svg" alt="Botão Instagram"></a></li>
+                    <li><a href="https://wa.me/5575992054298?text=Ol%C3%A1%21+Vim+pelo+website+do+Col%C3%A9gio+Dominium" class="whatsapp h-superior" target="_blank"><img src="assets/imagens/whatsapp.svg" alt="Botão Whatsapp"></a></li>
+                    <li><a href="https://www.instagram.com/dominium.teof/?hl=pt-br"  target="_blank" class="instagram h-superior"><img src="assets/imagens/instagram.svg" alt="Botão Instagram"></a></li>
                 </ul>
             </div>
         </div>
@@ -467,22 +468,7 @@
 
        <!-- Initialize Swiper -->
    <script>
-    var swiper = new Swiper(".time-swiper", {
-       loop:true,
-       grabCursor:true,
-       spaceBetween:20,
-       breakpoints: {
-           0: {
-               slidesPerView: 1.5,
-           },
-           768: {
-               slidesPerView: 3,
-           },
-           991: {
-               slidesPerView: 4,
-           },
-       },
-   });
+
   </script>
     <script>
     const app = new Vue({
@@ -495,6 +481,24 @@
             direcao_single: null
         },
         methods: {
+            getSwiper(){
+            var swiper = new Swiper(".time-swiper", {
+            loop:true,
+            grabCursor:true,
+            spaceBetween:20,
+            breakpoints: {
+                0: {
+                    slidesPerView: 1.5,
+                },
+                768: {
+                    slidesPerView: 3,
+                },
+                991: {
+                    slidesPerView: 4,
+                },
+            },
+            });
+            },
             fetchHistorias() {
                 let i = fetch('https://dominium-api.nordevtech.com.br/wp-json/dominium/historia/historia').then( response => {(response.json())
                 .then( responseJson => { 
@@ -533,9 +537,10 @@
                 })
             }
         },
-        created() {
+        created() { 
             this.fetchHistorias();
-            this.fetchDirecao()
+            this.fetchDirecao();
+            this.getSwiper()
         }
 
     })

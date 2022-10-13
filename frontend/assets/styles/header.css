@@ -105,6 +105,10 @@ input[type="checkbox"] {
   display: none;
 }
 
+nav .menu-btn i {
+  display: none;
+}
+
 @media (max-width: 1000px){
   .logo {
       margin-left: 20px;
@@ -114,6 +118,13 @@ input[type="checkbox"] {
   nav{
     padding: 0 40px 0 50px;
   }
+  
+  nav .menu-btn i {
+    color: #000;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
 
   .nav-border {
       padding: 0;
@@ -133,6 +144,14 @@ input[type="checkbox"] {
   nav ul li {
       width: 100%;
       padding: 25px;
+  }
+
+  #header-superior .links-externos .h-superior {
+    display: none;
+  }
+
+  #header-superior .container {
+    justify-content: center;
   }
 
 }

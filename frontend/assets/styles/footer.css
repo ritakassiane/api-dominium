@@ -130,11 +130,6 @@ address{
 
 @media (max-width: 1000px){
 
-    /* Header e Footer */
-    #header-superior {
-        display: none;
-    }
-
     .logo {
         margin-left: 20px;
         flex-direction: column;
