@@ -123,7 +123,34 @@
                     </div>
                 </div>
             </section>
+            <section class="nossa-equipe">
+                <div class="container">
+                    <h1 class="titulo-section">Nossa equipe</h1>
+                    <div class="filtro filtro-preto">Direção & Coordenação</div>
+                    <div class="swiper time-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="card swiper-slide" v-for="funcionario in direcao">
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <div class="image">
+                                            <img :src="funcionario.acf.foto" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="card-back">
+                                        <div class="card__content">
+                                            <h3>{{funcionario.titulo}}</h3>
+                                            <p class="subtitulo">{{ funcionario.acf.funcao }}</p>
+                                            <p class="descricao">{{ funcionario.acf.descricao }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>                   
         </div>
+
 
         <section class="nossa-equipe">
             <div class="container">
@@ -463,7 +490,9 @@
         data: {
             historias: [],
             historia: null,
-            ativo: ''
+            ativo: '',
+            direcao: [],
+            direcao_single: null
         },
         methods: {
             fetchHistorias() {
@@ -482,10 +511,31 @@
 
                 })
                 })
+            },
+            fetchDirecao(){
+                let i = fetch('https://dominium-api.nordevtech.com.br/wp-json/dominium/equipe/direcao').then( response => {(response.json())
+                .then( responseJson => { 
+                    this.direcao = responseJson;
+                    console.log(responseJson)
+                    console.log(direcao)
+
+                })
+                })
+                console.log(i)
+            },
+            fetchDirecaoSingle(nome) {
+                fetch(`https://dominium-api.nordevtech.com.br/wp-json/dominium/equipe/direcao_membro/${nome}`).then( response => {(response.json())
+                .then( responseJson => { 
+                    this.direcao_single = responseJson;
+                    console.log('aqui abaixo:')
+                    contole.log(responseJson)
+                })
+                })
             }
         },
         created() {
             this.fetchHistorias();
+            this.fetchDirecao()
         }
 
     })

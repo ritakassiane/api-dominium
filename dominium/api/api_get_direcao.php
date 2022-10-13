@@ -7,11 +7,13 @@ function api_get_direcao (){
         $id = get_the_ID();
         $slug = get_post_field('post_name', $id);
         $titulo = get_the_title();
+        $acf = get_fields($id);
 
         $post = array(
             'id' => $id,
             'slug' => $slug,
             'titulo' => $titulo,
+            'acf' => $acf,
         );
 
         $posts[$slug] = $post;
@@ -21,7 +23,7 @@ function api_get_direcao (){
 }
 
 function api_register_direcao (){
-    register_rest_route('dominium/direcao', '/direcao', array(
+    register_rest_route('dominium/equipe', '/direcao', array(
         'methods' => 'GET',
         'callback' => 'api_get_direcao',
     ));
