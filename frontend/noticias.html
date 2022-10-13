@@ -64,12 +64,7 @@
         <section class="destaque">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                      <img src="./assets/imagens/destaque_noticias.png" class="destaque-image">
-                  </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
+                </div>
               </div>
         </section>
         <section class="ultimas-noticias">
@@ -196,5 +191,29 @@
             </div>
         </div>
     </div>
+    <script>
+        let html_add_destaque_img = '';
+        fetch('https://dominium-api.nordevtech.com.br/wp-json/dominium/assets/destaque')
+        .then(
+            (responde) => console.log(responde.json()
+            .then(
+                 data => {
+                     let destaque_images = data.Notícias.acf.imagem_slide;
+                     destaque_images.forEach(element => {
+                        console.log(element.url)
+                        let htmlSegment = `<div class="swiper-slide">
+                          <img src="${element.url}" class="destaque-image">
+                      </div>`
+                      html_add_destaque_img+=htmlSegment
+                     });    
+                     console.log('fim:')
+                     console.log(html_add_destaque_img)
+
+                    let swiper = document.querySelector('.swiper-wrapper');
+                    swiper.innerHTML = html_add_destaque_img;
+                 }
+                ))
+        )
+    </script>
 </body>
 </html>

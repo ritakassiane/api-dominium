@@ -17,6 +17,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="./assets/js/vue.js"></script>
+    <script src="./assets/js/get_funcionarios.js"></script>
 
     <title>Sobre nós - Colégio Dominium</title>
 </head>
@@ -124,7 +125,7 @@
                     </div>
                 </div>
             </section>
-            <section class="nossa-equipe">
+            <!-- <section class="nossa-equipe">
                 <div class="container">
                     <h1 class="titulo-section">Nossa equipe</h1>
                     <div class="filtro filtro-preto">Direção & Coordenação</div>
@@ -149,7 +150,7 @@
                         </div>
                     </div>
                 </div>
-            </section>                   
+            </section>                    -->
         </div>
 
 
@@ -159,16 +160,24 @@
                 <div class="filtro filtro-preto">Direção & Coordenação</div>
                 <div class="swiper time-swiper">
                     <div class="swiper-wrapper">
+
                         <div class="card swiper-slide">
-                            <div class="image">
-                                <img src="assets/media/flavio-simone.svg" alt="Flávio Simone">
-                            </div>
-                            <div class="card__content">
-                                <h3>Flávio Simone</h3>
-                                <p class="descricao">Psicopedagoga graduada em História pela Universidade Estadual de Feira de Santana</p>
-                                <p class="subtitulo">ADMINISTRADOR</p>
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="image">
+                                        <img src="assets/media/flavio-simone.svg" alt="Melline Lima">
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="card__content">
+                                        <h3>Flávio Simone</h3>
+                                        <p class="descricao">Psicopedagoga graduada em História pela Universidade Estadual de Feira de Santana</p>
+                                        <p class="subtitulo">ADMINISTRADOR</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
                         <div class="card swiper-slide">
                             <div class="card-inner">
                                 <div class="card-front">
@@ -187,66 +196,121 @@
                         </div>
 
                         <div class="card swiper-slide">
-                            <img src="assets/media/marleide-macedo.svg" alt="Marleide Macedo">
-                            <div class="card__content">
-                                <h3>Marleide Macedo</h3>
-                                <p class="subtitulo">COORDENADORA | ENSINO MÉDIO</p>
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="image">
+                                        <img src="assets/media/marleide-macedo.svg" alt="Jucicleide Lopes">
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="card__content">
+                                        <h3>Marleide Macedo</h3>
+                                        <p class="subtitulo">COORDENADORA | ENSINO MÉDIO</p>
+                                        <p class="descricao">Psicopedagoga graduada em História pela Universidade Estadual de Feira de Santana</p>
+                                    </div>
+                                </div>
                             </div>
-
                         </div>
 
                         <div class="card swiper-slide">
-                            <div class="image">
-                                <img src="assets/media/melline-lima.svg" alt="Melline Lima">
-                            </div>
-                            <div class="card__content"> 
-                                <h3>Melline Lima</h3>
-                                <p class="descricao">Psicopedagoga graduada em História pela Universidade Estadual de Feira de Santana</p>
-                                <p class="subtitulo">COORDENADORA | FUNDAMENTAL</p>
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="image">
+                                        <img src="assets/media/melline-lima.svg" alt="Melline Lima">
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="card__content"> 
+                                        <h3>Melline Lima</h3>
+                                        <p class="descricao">Psicopedagoga graduada em História pela Universidade Estadual de Feira de Santana</p>
+                                        <p class="subtitulo">COORDENADORA | FUNDAMENTAL</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
                     </div>
-                </div>                               
+                </div> 
+                         
                 <div class="filtro filtro-preto">Administração</div>
                 <div class="swiper time-swiper">
                     <div class="swiper-wrapper">
+
+                        
                         <div class="card swiper-slide">
-                            <img src="assets/media/tavares.svg" alt="Tavares">
-                            <div class="card__content">
-                                <h3>Tavares</h3>
-                                <p class="subtitulo">FINANCEIRO</p>
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="assets/media/tavares.svg" alt="Tavares">
+                                </div>
+                                <div class="card-back">
+                                    <div class="card__content">
+                                        <h3>Tavares</h3>
+                                        <p class="subtitulo">FINANCEIRO</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card swiper-slide">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="assets/media/cristina.svg" alt="Cristina">
+                                </div>    
+                                <div class="card-back">
+                                    <div class="card__content">
+                                        <h3>Cristina</h3>
+                                        <p class="subtitulo">SECRETÁRIA</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
     
                         <div class="card swiper-slide">
-                            <img src="assets/media/cristina.svg" alt="Cristina">
-                            <div class="card__content">
-                                <h3>Cristina</h3>
-                                <p class="subtitulo">SECRETÁRIA</p>
+
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="assets/media/hebert.svg" alt="Hebert">
+    
+                                </div>
+                                <div class="card-back">
+                                    <div class="card__content">
+                                        <h3>Hebert</h3>
+                                        <p class="subtitulo">MECANÓGRAFO</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+    
+                        <div class="card swiper-slide">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="assets/media/ivanize.svg" alt="Ivanize">
+    
+                                </div>
+                                <div class="card-back">
+                                    
+                                    <div class="card__content">
+                                        <h3>Ivanize</h3>
+                                        <p class="subtitulo">SECRETÁRIA</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
     
                         <div class="card swiper-slide">
-                            <img src="assets/media/hebert.svg" alt="Hebert">
-                            <div class="card__content">
-                                <h3>Hebert</h3>
-                                <p class="subtitulo">MECANÓGRAFO</p>
-                            </div>
-                        </div>
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="assets/media/margarida.svg" alt="Margarida">
     
-                        <div class="card swiper-slide">
-                            <img src="assets/media/ivanize.svg" alt="Ivanize">
-                            <div class="card__content">
-                                <h3>Ivanize</h3>
-                                <p class="subtitulo">SECRETÁRIA</p>
-                            </div>
-                        </div>
-    
-                        <div class="card swiper-slide">
-                            <img src="assets/media/margarida.svg" alt="Margarida">
-                            <div class="card__content">
-                                <h3>Margarida</h3>
-                                <p class="subtitulo">RECEPÇÃO</p>
+                                </div>
+                                <div class="card-back">
+                                    <div class="card__content">
+                                        <h3>Margarida</h3>
+                                        <p class="subtitulo">RECEPÇÃO</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -258,44 +322,77 @@
                     <div class="swiper time-swiper">
                         <div class="swiper-wrapper">
                             <div class="card swiper-slide ">
-                                <img src="assets/media/luciana-peleteiro.svg" alt="Luciana Peleteiro">
-                                <div class="card__content">
-                                    <h3>Luciana Peleteiro</h3>
-                                    <p class="subtitulo">Lorem ipsum</p>
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <img src="assets/media/luciana-peleteiro.svg" alt="Luciana Peleteiro">
+                                    </div>
+                                    <div class="card-back">                                        
+                                        <div class="card__content">
+                                            <h3>Luciana Peleteiro</h3>
+                                            <p class="subtitulo">Lorem ipsum</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
     
                             <div class="card swiper-slide">
-                                <img src="assets/media/lorem-ipsum1.svg" alt="Lorem ipsum 1">
-                                <div class="card__content">
-                                    <h3>Lorem Ipsum</h3>
-                                    <p class="subtitulo">LOREM IPSUM</p>
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <img src="assets/media/lorem-ipsum1.svg" alt="Lorem ipsum 1">
+                                    </div>
+                                    <div class="card-back">                                        
+                                        <div class="card__content">
+                                            <h3>Lorem Ipsum</h3>
+                                            <p class="subtitulo">LOREM IPSUM</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
     
                             <div class="card swiper-slide">
-                                <img src="assets/media/lorem-ipsum2.svg" alt="Lorem Ipsum 2">
-                                <div class="card__content">
-                                    <h3>Lorem Ipsum</h3>
-                                    <p class="subtitulo">LOREM IPSUM</p>
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <img src="assets/media/lorem-ipsum2.svg" alt="Lorem Ipsum 2">
+                                    </div>
+                                    <div class="card-back">                                        
+                                        <div class="card__content">
+                                            <h3>Lorem Ipsum</h3>
+                                            <p class="subtitulo">LOREM IPSUM</p>
+                                        </div>
+                                    </div>
                                 </div>
 
                             </div>
     
                             <div class="card swiper-slide">
-                                <img src="assets/media/lorem-ipsum3.svg" alt="Lorem Ipsum 3">
-                                <div class="card__content">
-                                    <h3>Lorem Ipsum</h3>
-                                    <p class="subtitulo">LOREM IPSUM</p>
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <img src="assets/media/lorem-ipsum3.svg" alt="Lorem Ipsum 3">
+        
+                                    </div>
+                                    <div class="card-back">
+                                        <div class="card__content">
+                                            <h3>Lorem Ipsum</h3>
+                                            <p class="subtitulo">LOREM IPSUM</p>
+                                        </div>
+                                    </div>
                                 </div>
                                 
                             </div>
     
                             <div class="card swiper-slide">
-                                <img src="assets/media/rose.svg" alt="Rose">
-                                <div class="card__content">
-                                    <h3>Rose</h3>
-                                    <p class="subtitulo">LOREM IPSUM</p>
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <img src="assets/media/rose.svg" alt="Rose">
+        
+                                    </div>
+                                    <div class="card-back">
+                                        <div class="card__content">
+                                            <h3>Rose</h3>
+                                            <p class="subtitulo">LOREM IPSUM</p>
+                                        </div>
+        
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -309,42 +406,81 @@
                     <div class="swiper time-swiper">
                         <div class="swiper-wrapper">
                             <div class="card swiper-slide">
-                                <img src="assets/media/elmo-carneiro.svg" alt="Elmo Carneiro">
-                                <div class="card__content">
-                                    <h3>Elmo Carneiro</h3>
-                                    <p class="subtitulo">GEOGRAFIA</p>
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <img src="assets/media/elmo-carneiro.svg" alt="Elmo Carneiro">
+        
+                                    </div>
+                                    <div class="card-back">
+                                        <div class="card__content">
+                                            <h3>Elmo Carneiro</h3>
+                                            <p class="subtitulo">GEOGRAFIA</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
     
                             <div class="card swiper-slide">
-                                <img src="assets/media/maria-elaine.svg" alt="Maria Elaine">
-                                <div class="card__content">
-                                    <h3>Maria Elaine</h3>
-                                    <p class="subtitulo">PORTUGUÊS E REDAÇÃO</p>
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <img src="assets/media/maria-elaine.svg" alt="Maria Elaine">
+        
+                                    </div>
+                                    <div class="card-back">
+                                        <div class="card__content">
+                                            <h3>Maria Elaine</h3>
+                                            <p class="subtitulo">PORTUGUÊS E REDAÇÃO</p>
+                                        </div>
+                                        
+                                    </div>
                                 </div>
                             </div>
     
                             <div class="card swiper-slide">
-                                <img src="assets/media/luciano-oliveira.svg" alt="Luciano Oliveira">
-                                <div class="card__content">
-                                    <h3>Luciano Oliveira</h3>
-                                    <p class="subtitulo">BIOLOGIA</p>
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <img src="assets/media/luciano-oliveira.svg" alt="Luciano Oliveira">
+        
+                                    </div>
+                                    <div class="card-back">
+                                        <div class="card__content">
+                                            <h3>Luciano Oliveira</h3>
+                                            <p class="subtitulo">BIOLOGIA</p>
+                                        </div>
+                                        
+                                    </div>
                                 </div>
                             </div>
     
                             <div class="card swiper-slide">
-                                <img src="assets/media/fernanda-gama.svg" alt="Fernanda Gama">
-                                <div class="card__content">
-                                    <h3>Fernanda Gama</h3>
-                                    <p class="subtitulo">PORTUGUÊS E LITERATURA</p>
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <img src="assets/media/fernanda-gama.svg" alt="Fernanda Gama">
+        
+                                    </div>
+                                    <div class="card-back">
+                                        <div class="card__content">
+                                            <h3>Fernanda Gama</h3>
+                                            <p class="subtitulo">PORTUGUÊS E LITERATURA</p>
+                                        </div>
+                                        
+                                    </div>
                                 </div>
                             </div>
     
                             <div class="card swiper-slide">
-                                <img src="assets/media/natanael.svg" alt="Natanael">
-                                <div class="card__content">
-                                    <h3>Natanael</h3>
-                                    <p class="subtitulo">FILOSOFIA E SOCIOLOGIA</p>
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <img src="assets/media/natanael.svg" alt="Natanael">
+        
+                                    </div>
+                                    <div class="card-back">
+                                        <div class="card__content">
+                                            <h3>Natanael</h3>
+                                            <p class="subtitulo">FILOSOFIA E SOCIOLOGIA</p>
+                                        </div>
+                                        
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -531,7 +667,6 @@
                 fetch(`https://dominium-api.nordevtech.com.br/wp-json/dominium/equipe/direcao_membro/${nome}`).then( response => {(response.json())
                 .then( responseJson => { 
                     this.direcao_single = responseJson;
-                    console.log('aqui abaixo:')
                     contole.log(responseJson)
                 })
                 })
@@ -542,7 +677,6 @@
             this.fetchDirecao();
             this.getSwiper()
         }
-
     })
     </script>
     </body>
