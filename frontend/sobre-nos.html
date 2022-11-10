@@ -69,16 +69,6 @@
     </header>
 
     <main>
-        <section class="destaque">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                      <img src="./assets/imagens/destaque-quem-somos.png" class="destaque-image">
-                  </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-              </div>
         </section>
         <section class="quem-somos">
             <div class="container">
@@ -125,7 +115,7 @@
                     </div>
                 </div>
             </section>
-            <!-- <section class="nossa-equipe">
+            <section class="nossa-equipe">
                 <div class="container">
                     <h1 class="titulo-section">Nossa equipe</h1>
                     <div class="filtro filtro-preto">Direção & Coordenação</div>
@@ -150,7 +140,7 @@
                         </div>
                     </div>
                 </div>
-            </section>                    -->
+            </section>                   
         </div>
 
 
@@ -159,7 +149,7 @@
                 <h1 class="titulo-section">Nossa equipe</h1>
                 <div class="filtro filtro-preto">Direção & Coordenação</div>
                 <div class="swiper time-swiper">
-                    <div class="swiper-wrapper">
+                    <div id="direcao" class="swiper-wrapper">
 
                         <div class="card swiper-slide">
                             <div class="card-inner">
@@ -234,7 +224,7 @@
                          
                 <div class="filtro filtro-preto">Administração</div>
                 <div class="swiper time-swiper">
-                    <div class="swiper-wrapper">
+                    <div id="adm" class="swiper-wrapper">
 
                         
                         <div class="card swiper-slide">
@@ -320,7 +310,7 @@
                 <div class="professores-ensino-fundamental-1">
                     <div class="filtro filtro-preto">Professores  •  Fundamental I</div>
                     <div class="swiper time-swiper">
-                        <div class="swiper-wrapper">
+                        <div id="prof1" class="swiper-wrapper">
                             <div class="card swiper-slide ">
                                 <div class="card-inner">
                                     <div class="card-front">
@@ -404,7 +394,7 @@
                 <div class="professores-ensino-fundamental-2-e-medio">
                     <div class="filtro filtro-preto">Professores  •  Fundamental II e Ensino Médio</div>
                     <div class="swiper time-swiper">
-                        <div class="swiper-wrapper">
+                        <div id="prof2" class="swiper-wrapper">
                             <div class="card swiper-slide">
                                 <div class="card-inner">
                                     <div class="card-front">
@@ -490,7 +480,7 @@
                 <div class="funcionarios">
                     <div class="filtro filtro-preto">Funcionários</div>
                     <div class="swiper time-swiper">
-                        <div class="swiper-wrapper">
+                        <div id="funcionarios" class="swiper-wrapper">
                             <div class="card swiper-slide">
                                 <img src="assets/media/cida.svg" alt="Cida">
                                 <div class="card__content">
@@ -585,6 +575,7 @@
             </div>
         </div>
     </div>
+    <script src="./assets//js/get-funcionarios.js"></script>
     <!-- Swiper JS -->
     <script src="./assets/js/swiper-bundle.min.js"></script>
 
@@ -641,7 +632,7 @@
                     this.historias = responseJson;
                 })
                 })
-                console.log(i)
+                // console.log(i)
             },
             fetchHistoria(ano) {
                 fetch(`https://dominium-api.nordevtech.com.br/wp-json/dominium/historia/historia_single/${ano}`).then( response => {(response.json())
@@ -656,18 +647,18 @@
                 let i = fetch('https://dominium-api.nordevtech.com.br/wp-json/dominium/equipe/direcao').then( response => {(response.json())
                 .then( responseJson => { 
                     this.direcao = responseJson;
-                    console.log(responseJson)
-                    console.log(direcao)
+                    // console.log(responseJson)
+                    // console.log(direcao)
 
                 })
                 })
-                console.log(i)
+                // console.log(i)
             },
             fetchDirecaoSingle(nome) {
                 fetch(`https://dominium-api.nordevtech.com.br/wp-json/dominium/equipe/direcao_membro/${nome}`).then( response => {(response.json())
                 .then( responseJson => { 
                     this.direcao_single = responseJson;
-                    contole.log(responseJson)
+                    // contole.log(responseJson)
                 })
                 })
             }
@@ -678,6 +669,40 @@
             this.getSwiper()
         }
     })
+    </script>
+    <script>
+        let html_add_adm = '';
+        fetch('https://dominium-api.nordevtech.com.br/wp-json/dominium/equipe/administracao')
+        .then(
+            (responde) => console.log(responde.json()
+            .then(
+                data => {
+                    
+                    console.log(data)
+                    for (var key in data){
+                        console.log(data[key].id)
+                        let htmlSegment = `
+                        <div class="card swiper-slide">
+                        <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="${data[key].acf.foto}" alt="${data[key].slug}">
+                                </div>
+                                <div class="card-back">
+                                    <div class="card__content">
+                                        <h3>${data[key].acf.nome}</h3>
+                                        <p class="subtitulo">${data[key].acf.funcao}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>`
+                        html_add_adm+=htmlSegment
+                    }
+                    let swiper = document.querySelector('#adm');
+                    swiper.innerHTML = html_add_adm;
+                }
+                ))
+            )
+
     </script>
     </body>
 </html>
