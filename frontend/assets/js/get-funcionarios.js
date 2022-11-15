@@ -40,3 +40,4 @@ get_funcionarios('#prof1', 'https://dominium-api.nordevtech.com.br/wp-json/domin
 get_funcionarios('#prof2', 'https://dominium-api.nordevtech.com.br/wp-json/dominium/equipe/professores-ii')
 get_funcionarios('#direcao', 'https://dominium-api.nordevtech.com.br/wp-json/dominium/equipe/direcao')
 get_funcionarios('#adm', 'https://dominium-api.nordevtech.com.br/wp-json/dominium/assets/administracao')
+get_funcionarios('#funcionarios', 'https://dominium-api.nordevtech.com.br/wp-json/dominium/equipe/funcionarios')
