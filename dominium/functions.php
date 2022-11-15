@@ -9,6 +9,7 @@ require_once TEMPLATEPATH . '/api/api_get_testimonials.php';
 require_once TEMPLATEPATH . '/api/api_get_direcao.php';
 require_once TEMPLATEPATH . '/api/api_get_historia.php';
 require_once TEMPLATEPATH . '/api/api_get_destaque.php';
+require_once TEMPLATEPATH . '/api/api_get_funcionarios.php';
 
 
 require_once TEMPLATEPATH . '/api/api_get_livro.php';
