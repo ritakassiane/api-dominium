@@ -8,11 +8,13 @@ function api_get_professores_ii (){
         $id = get_the_ID();
         $slug = get_post_field('post_name', $id);
         $titulo = get_the_title();
+        $acf = get_fields($id);
 
         $post = array(
             'id' => $id,
             'slug' => $slug,
             'titulo' => $titulo,
+            'acf' => $acf,
         );
 
         $posts[$slug] = $post;
